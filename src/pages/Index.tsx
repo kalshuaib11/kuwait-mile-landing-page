@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
@@ -253,10 +254,10 @@ const Index = () => {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-[#34b2ff] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#34b2ff] to-[#2899e6]"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight">
-              Ready to Get Started?
+              Partner with FastMile Today
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Contact us today to discuss your delivery needs
@@ -270,26 +271,46 @@ const Index = () => {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {/* Phone */}
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center border border-white/20">
-              <Phone className="w-8 h-8 text-white mb-4 mx-auto" />
-              <h4 className="text-lg font-bold text-white mb-2">Phone</h4>
-              <p className="text-blue-100">+965 98571783</p>
+          {/* Contact Info Grid */}
+          <div className="space-y-8">
+            {/* Phone and Email Side by Side */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Phone */}
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center border border-white/20">
+                <Phone className="w-8 h-8 text-white mb-4 mx-auto" />
+                <h4 className="text-lg font-bold text-white mb-2">Phone</h4>
+                <p className="text-blue-100">+965 98571783</p>
+              </div>
+
+              {/* Email */}
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center border border-white/20">
+                <Mail className="w-8 h-8 text-white mb-4 mx-auto" />
+                <h4 className="text-lg font-bold text-white mb-2">Email</h4>
+                <p className="text-blue-100">kwfastmile@gmail.com</p>
+              </div>
             </div>
 
-            {/* Email */}
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center border border-white/20">
-              <Mail className="w-8 h-8 text-white mb-4 mx-auto" />
-              <h4 className="text-lg font-bold text-white mb-2">Email</h4>
-              <p className="text-blue-100">kwfastmile@gmail.com</p>
-            </div>
-
-            {/* Location */}
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center border border-white/20">
-              <MapPin className="w-8 h-8 text-white mb-4 mx-auto" />
-              <h4 className="text-lg font-bold text-white mb-2">Office</h4>
-              <p className="text-blue-100">Kuwait City, Sharq</p>
+            {/* Office Location with Map */}
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+              <div className="flex items-center justify-center mb-4">
+                <MapPin className="w-8 h-8 text-white mr-3" />
+                <h4 className="text-lg font-bold text-white">Our Head Office</h4>
+              </div>
+              <p className="text-blue-100 text-center mb-6">Kuwait City, Sharq</p>
+              
+              {/* Google Maps Embed */}
+              <div className="w-full h-48 rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14434.658469325736!2d47.9706229!3d29.3749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf85fd5ac93315%3A0xd542b96c60b7f3d2!2sSharq%2C%20Kuwait%20City%2C%20Kuwait!5e0!3m2!1sen!2s!4v1735919234567!5m2!1sen!2s"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-lg"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
