@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
@@ -66,8 +65,8 @@ const Index = () => {
                 size="lg"
                 className="border-3 border-[#34b2ff] text-[#34b2ff] hover:bg-[#34b2ff] hover:text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105"
               >
-                <MessageCircle className="mr-3 h-6 w-6" />
-                WhatsApp Us
+                <Phone className="mr-3 h-6 w-6" />
+                Call Us
               </Button>
             </div>
 
@@ -251,67 +250,46 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact & Office Section */}
-      <section id="contact" className="py-24 bg-[#34b2ff] relative overflow-hidden">
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-[#34b2ff] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#34b2ff] to-[#2899e6]"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
-              Partner with FastMile Today
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight">
+              Ready to Get Started?
             </h2>
-            <p className="text-xl sm:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-              Join Kuwait's most reliable delivery network. Get started with a custom plan tailored to your business needs.
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Contact us today to discuss your delivery needs
             </p>
             
             <Button 
               size="lg" 
-              className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl mb-16"
+              className="bg-white text-[#34b2ff] hover:bg-gray-100 px-8 py-3 text-lg font-bold rounded-xl transition-all hover:scale-105 shadow-xl mb-12"
             >
-              Start Your Partnership
+              Start Partnership
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Information */}
-            <div>
-              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-8 leading-tight">Get in Touch</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-6">
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-                  <MessageCircle className="w-8 h-8 text-white mb-4" />
-                  <h4 className="text-lg font-bold text-white mb-2">WhatsApp</h4>
-                  <p className="text-blue-100">+965 98571783</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-                  <Mail className="w-8 h-8 text-white mb-4" />
-                  <h4 className="text-lg font-bold text-white mb-2">Email</h4>
-                  <p className="text-blue-100">kwfastmile@gmail.com</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-                  <Phone className="w-8 h-8 text-white mb-4" />
-                  <h4 className="text-lg font-bold text-white mb-2">Phone</h4>
-                  <p className="text-blue-100">+965 98571783</p>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {/* Phone */}
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center border border-white/20">
+              <Phone className="w-8 h-8 text-white mb-4 mx-auto" />
+              <h4 className="text-lg font-bold text-white mb-2">Phone</h4>
+              <p className="text-blue-100">+965 98571783</p>
             </div>
 
-            {/* Office Location */}
-            <div>
-              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-8 leading-tight">Our Head Office</h3>
-              <div className="flex items-start space-x-6 mb-8">
-                <MapPin className="w-8 h-8 text-white mt-2 flex-shrink-0" />
-                <div>
-                  <p className="text-xl font-bold text-white mb-4">FastMile Head Office</p>
-                  <p className="text-lg text-blue-100 leading-relaxed">
-                    Kuwait City, Sharq, Block 2<br />
-                    Ahmad Aljaber Street, CBK Building, Floor 1
-                  </p>
-                </div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 h-64 border border-white/20">
-                <div className="w-full h-full bg-white/20 rounded-xl flex items-center justify-center">
-                  <p className="text-lg text-white">Google Maps Integration</p>
-                </div>
-              </div>
+            {/* Email */}
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center border border-white/20">
+              <Mail className="w-8 h-8 text-white mb-4 mx-auto" />
+              <h4 className="text-lg font-bold text-white mb-2">Email</h4>
+              <p className="text-blue-100">kwfastmile@gmail.com</p>
+            </div>
+
+            {/* Location */}
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center border border-white/20">
+              <MapPin className="w-8 h-8 text-white mb-4 mx-auto" />
+              <h4 className="text-lg font-bold text-white mb-2">Office</h4>
+              <p className="text-blue-100">Kuwait City, Sharq</p>
             </div>
           </div>
         </div>
@@ -339,9 +317,6 @@ const Index = () => {
             <div className="flex items-center space-x-6">
               <a href="https://www.instagram.com/fastmilekw/" className="text-gray-300 hover:text-[#34b2ff] transition-colors">
                 <Instagram className="w-8 h-8" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-[#34b2ff] transition-colors">
-                <MessageCircle className="w-8 h-8" />
               </a>
             </div>
           </div>
