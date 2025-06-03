@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
@@ -96,27 +97,31 @@ const Index = () => {
       </section>
 
       {/* Who We Serve */}
-      <section className="py-20 bg-white">
+      <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-black mb-6">Who We Serve</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-8 leading-tight">
+              Who We <span className="text-[#34b2ff]">Serve</span>
+            </h2>
+            <p className="text-2xl sm:text-3xl lg:text-4xl text-gray-600 max-w-5xl mx-auto leading-relaxed font-light">
               Whether you're a local café or a fast-growing e-store — we've got your delivery covered.
             </p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: "Restaurants", icon: Utensils, desc: "From local cafés to fine dining" },
-              { title: "Online Stores", icon: ShoppingBag, desc: "E-commerce and retail delivery" },
-              { title: "Pharmacies", icon: Pill, desc: "Medical and health products" },
+              { title: "Restaurants", icon: Utensils, desc: "From local cafés to fine dining establishments" },
+              { title: "Online Stores", icon: ShoppingBag, desc: "E-commerce and retail delivery solutions" },
+              { title: "Pharmacies", icon: Pill, desc: "Medical and health products delivery" },
               { title: "Grocery Shops", icon: ShoppingCart, desc: "Fresh food and daily essentials" }
             ].map((item, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#34b2ff]">
-                <CardContent className="p-8 text-center">
-                  <item.icon className="w-12 h-12 text-[#34b2ff] mb-4 mx-auto" />
-                  <h3 className="text-xl font-bold text-black mb-3">{item.title}</h3>
-                  <p className="text-gray-600">{item.desc}</p>
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-[#34b2ff] bg-white hover:bg-gradient-to-br hover:from-blue-50/50 hover:to-white rounded-3xl overflow-hidden">
+                <CardContent className="p-10 text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-[#34b2ff]/10 rounded-2xl mb-8 group-hover:bg-[#34b2ff] transition-all duration-300">
+                    <item.icon className="w-10 h-10 text-[#34b2ff] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-2xl lg:text-3xl font-bold text-black mb-4">{item.title}</h3>
+                  <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">{item.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -125,44 +130,48 @@ const Index = () => {
       </section>
 
       {/* Our Services */}
-      <section id="services" className="py-20 bg-gray-50">
+      <section id="services" className="py-32 bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-black mb-6">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-8 leading-tight">
+              Our <span className="text-[#34b2ff]">Services</span>
+            </h2>
+            <p className="text-2xl sm:text-3xl lg:text-4xl text-gray-600 max-w-5xl mx-auto leading-relaxed font-light">
               Comprehensive delivery solutions tailored for Kuwait's business landscape
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
               {
                 title: "Local Last-Mile Delivery",
-                desc: "Door-to-door delivery across all Kuwait governorates with real-time tracking",
+                desc: "Door-to-door delivery across all Kuwait governorates with real-time tracking and instant notifications",
                 icon: Truck
               },
               {
                 title: "Bulk Order Fulfillment",
-                desc: "Handle high-volume orders with our scalable delivery infrastructure",
+                desc: "Handle high-volume orders with our scalable delivery infrastructure and dedicated support team",
                 icon: Package
               },
               {
                 title: "Merchant Dashboard",
-                desc: "Complete delivery management with logs, analytics, and customer insights",
+                desc: "Complete delivery management with logs, analytics, and customer insights for data-driven decisions",
                 icon: BarChart3
               },
               {
                 title: "Contract-Based Plans",
-                desc: "Flexible partnership models designed for growing businesses",
+                desc: "Flexible partnership models designed for growing businesses with custom pricing and priority support",
                 icon: HandHeart
               }
             ].map((service, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
-                <div className="flex items-start space-x-4">
-                  <service.icon className="w-8 h-8 text-[#34b2ff] mt-1 flex-shrink-0" />
+              <div key={index} className="bg-white rounded-3xl p-12 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#34b2ff]/20">
+                <div className="flex items-start space-x-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-[#34b2ff]/10 rounded-2xl flex-shrink-0">
+                    <service.icon className="w-8 h-8 text-[#34b2ff]" />
+                  </div>
                   <div>
-                    <h3 className="text-xl font-bold text-black mb-3">{service.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{service.desc}</p>
+                    <h3 className="text-2xl lg:text-3xl font-bold text-black mb-4 leading-tight">{service.title}</h3>
+                    <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">{service.desc}</p>
                   </div>
                 </div>
               </div>
@@ -172,51 +181,53 @@ const Index = () => {
       </section>
 
       {/* Why Choose FastMile */}
-      <section id="why-us" className="py-20 bg-white">
+      <section id="why-us" className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-black mb-6">Why Choose FastMile</h2>
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-8 leading-tight">
+              Why Choose <span className="text-[#34b2ff]">FastMile</span>
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {[
               {
                 title: "We speak your street",
-                desc: "Hyperlocal focus with intimate knowledge of Kuwait's neighborhoods",
+                desc: "Hyperlocal focus with intimate knowledge of Kuwait's neighborhoods, from Salmiya to Hawalli",
                 icon: Map
               },
               {
                 title: "Friendly local drivers",
-                desc: "Professional, courteous delivery partners who understand local culture",
+                desc: "Professional, courteous delivery partners who understand local culture and customer expectations",
                 icon: Users
               },
               {
                 title: "Real-time support",
-                desc: "Instant customer service through WhatsApp and phone support",
+                desc: "Instant customer service through WhatsApp and phone support available throughout delivery hours",
                 icon: Headphones
               },
               {
                 title: "Full Kuwait coverage",
-                desc: "From Kuwait City to Ahmadi - complete nationwide delivery network",
+                desc: "From Kuwait City to Ahmadi - complete nationwide delivery network covering all governorates",
                 icon: MapIcon
               },
               {
                 title: "Smart dispatching",
-                desc: "AI-powered routing for fastest and most efficient deliveries",
+                desc: "AI-powered routing for fastest and most efficient deliveries, reducing wait times and costs",
                 icon: Brain
               },
               {
                 title: "Reliable partnerships",
-                desc: "Build lasting business relationships with transparent pricing",
+                desc: "Build lasting business relationships with transparent pricing and dedicated account management",
                 icon: Star
               }
             ].map((feature, index) => (
               <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-[#34b2ff]/10 rounded-full mb-6 group-hover:bg-[#34b2ff] transition-colors">
-                  <feature.icon className="w-8 h-8 text-[#34b2ff] group-hover:text-white transition-colors" />
+                <div className="inline-flex items-center justify-center w-24 h-24 bg-[#34b2ff]/10 rounded-3xl mb-8 group-hover:bg-[#34b2ff] transition-all duration-300 group-hover:scale-110">
+                  <feature.icon className="w-12 h-12 text-[#34b2ff] group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="text-xl font-bold text-black mb-3">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
+                <h3 className="text-2xl lg:text-3xl font-bold text-black mb-4 leading-tight">{feature.title}</h3>
+                <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-sm mx-auto">{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -224,51 +235,54 @@ const Index = () => {
       </section>
 
       {/* Trusted By */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-black mb-8">Trusted By Kuwait's Leading Businesses</h3>
-            <div className="flex justify-center items-center space-x-12 opacity-40">
-              <div className="w-24 h-12 bg-gray-300 rounded"></div>
-              <div className="w-24 h-12 bg-gray-300 rounded"></div>
-              <div className="w-24 h-12 bg-gray-300 rounded"></div>
-              <div className="w-24 h-12 bg-gray-300 rounded"></div>
+            <h3 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-12 leading-tight">
+              Trusted By Kuwait's <span className="text-[#34b2ff]">Leading Businesses</span>
+            </h3>
+            <div className="flex justify-center items-center space-x-16 opacity-40">
+              <div className="w-32 h-16 bg-gray-300 rounded-xl"></div>
+              <div className="w-32 h-16 bg-gray-300 rounded-xl"></div>
+              <div className="w-32 h-16 bg-gray-300 rounded-xl"></div>
+              <div className="w-32 h-16 bg-gray-300 rounded-xl"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Get Started / Contact */}
-      <section id="contact" className="py-20 bg-[#34b2ff]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-            Partner with FastMile Today
+      <section id="contact" className="py-32 bg-[#34b2ff] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#34b2ff] to-[#2899e6]"></div>
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-8 leading-tight">
+            Partner with FastMile <span className="block">Today</span>
           </h2>
-          <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
+          <p className="text-2xl sm:text-3xl lg:text-4xl text-blue-100 mb-16 max-w-4xl mx-auto leading-relaxed font-light">
             Join Kuwait's most reliable delivery network. Get started with a custom plan tailored to your business needs.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-              <MessageCircle className="w-8 h-8 text-white mb-4 mx-auto" />
-              <h3 className="text-lg font-semibold text-white mb-2">WhatsApp</h3>
-              <p className="text-blue-100">+965 98571783</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
+              <MessageCircle className="w-12 h-12 text-white mb-6 mx-auto" />
+              <h3 className="text-xl lg:text-2xl font-bold text-white mb-3">WhatsApp</h3>
+              <p className="text-lg lg:text-xl text-blue-100">+965 98571783</p>
             </div>
-            <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-              <Mail className="w-8 h-8 text-white mb-4 mx-auto" />
-              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <p className="text-blue-100">kwfastmile@gmail.com</p>
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
+              <Mail className="w-12 h-12 text-white mb-6 mx-auto" />
+              <h3 className="text-xl lg:text-2xl font-bold text-white mb-3">Email</h3>
+              <p className="text-lg lg:text-xl text-blue-100">kwfastmile@gmail.com</p>
             </div>
-            <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-              <Phone className="w-8 h-8 text-white mb-4 mx-auto" />
-              <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-              <p className="text-blue-100">+965 98571783</p>
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
+              <Phone className="w-12 h-12 text-white mb-6 mx-auto" />
+              <h3 className="text-xl lg:text-2xl font-bold text-white mb-3">Phone</h3>
+              <p className="text-lg lg:text-xl text-blue-100">+965 98571783</p>
             </div>
           </div>
 
           <Button 
             size="lg" 
-            className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-lg font-semibold"
+            className="bg-white text-[#34b2ff] hover:bg-gray-100 px-16 py-6 text-xl lg:text-2xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl"
           >
             Start Your Partnership
           </Button>
@@ -277,59 +291,59 @@ const Index = () => {
 
       {/* Footer with Map */}
       <footer className="bg-black text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Our Head Office</h3>
-              <div className="flex items-start space-x-4 mb-8">
-                <MapPin className="w-6 h-6 text-[#34b2ff] mt-1 flex-shrink-0" />
+              <h3 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 leading-tight">Our Head Office</h3>
+              <div className="flex items-start space-x-6 mb-12">
+                <MapPin className="w-8 h-8 text-[#34b2ff] mt-2 flex-shrink-0" />
                 <div>
-                  <p className="text-lg font-semibold mb-2">FastMile Head Office</p>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-xl lg:text-2xl font-bold mb-4">FastMile Head Office</p>
+                  <p className="text-lg lg:text-xl text-gray-300 leading-relaxed">
                     Kuwait City, Sharq, Block 2<br />
                     Ahmad Aljaber Street, CBK Building, Floor 1
                   </p>
                 </div>
               </div>
             </div>
-            <div className="bg-gray-800 rounded-xl p-4 h-64">
-              <div className="w-full h-full bg-gray-700 rounded-lg flex items-center justify-center">
-                <p className="text-gray-400">Google Maps Integration</p>
+            <div className="bg-gray-800 rounded-3xl p-6 h-80">
+              <div className="w-full h-full bg-gray-700 rounded-2xl flex items-center justify-center">
+                <p className="text-xl text-gray-400">Google Maps Integration</p>
               </div>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="flex flex-col md:flex-row justify-between items-center">
-              <div className="flex items-center mb-4 md:mb-0">
+              <div className="flex items-center mb-6 md:mb-0">
                 <img 
                   src="/lovable-uploads/cc33c8df-a916-45a8-b0e6-9554aa9d7d4d.png" 
                   alt="FastMile" 
-                  className="h-8 w-auto"
+                  className="h-10 w-auto"
                 />
               </div>
               
-              <div className="flex flex-wrap justify-center md:justify-start space-x-8 mb-4 md:mb-0">
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">About</a>
-                <a href="#services" className="text-gray-300 hover:text-white transition-colors">Services</a>
-                <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">Become a Partner</a>
+              <div className="flex flex-wrap justify-center md:justify-start space-x-12 mb-6 md:mb-0">
+                <a href="#" className="text-lg text-gray-300 hover:text-white transition-colors">About</a>
+                <a href="#services" className="text-lg text-gray-300 hover:text-white transition-colors">Services</a>
+                <a href="#contact" className="text-lg text-gray-300 hover:text-white transition-colors">Contact</a>
+                <a href="#" className="text-lg text-gray-300 hover:text-white transition-colors">Become a Partner</a>
               </div>
 
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-6">
                 <a href="https://www.instagram.com/fastmilekw/" className="text-gray-300 hover:text-[#34b2ff] transition-colors">
-                  <Instagram className="w-6 h-6" />
+                  <Instagram className="w-8 h-8" />
                 </a>
                 <a href="#" className="text-gray-300 hover:text-[#34b2ff] transition-colors">
-                  <MessageCircle className="w-6 h-6" />
+                  <MessageCircle className="w-8 h-8" />
                 </a>
               </div>
             </div>
             
-            <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-              <p className="text-gray-400">© 2025 FastMile. All rights reserved.</p>
+            <div className="mt-12 pt-12 border-t border-gray-800 text-center">
+              <p className="text-lg text-gray-400">© 2025 FastMile. All rights reserved.</p>
             </div>
           </div>
         </div>
