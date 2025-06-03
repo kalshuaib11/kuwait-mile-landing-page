@@ -296,7 +296,11 @@ const Index = () => {
                 <MapPin className="w-8 h-8 text-white mr-3" />
                 <h4 className="text-lg font-bold text-white">Our Head Office</h4>
               </div>
-              <p className="text-blue-100 text-center mb-6">Kuwait City, Sharq</p>
+              <p className="text-blue-100 text-center mb-6">
+                Sharq, Block 2, Ahmad Aljaber Street<br />
+                CBK Building, Floor 1<br />
+                Kuwait City, Kuwait
+              </p>
               
               {/* Google Maps Embed */}
               <div className="w-full h-48 rounded-lg overflow-hidden">
