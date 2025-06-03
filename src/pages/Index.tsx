@@ -251,100 +251,103 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Get Started / Contact */}
+      {/* Contact & Office Section */}
       <section id="contact" className="py-24 bg-[#34b2ff] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#34b2ff] to-[#2899e6]"></div>
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
-            Partner with FastMile Today
-          </h2>
-          <p className="text-xl sm:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-            Join Kuwait's most reliable delivery network. Get started with a custom plan tailored to your business needs.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-              <MessageCircle className="w-8 h-8 text-white mb-4 mx-auto" />
-              <h3 className="text-lg font-bold text-white mb-2">WhatsApp</h3>
-              <p className="text-blue-100">+965 98571783</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-              <Mail className="w-8 h-8 text-white mb-4 mx-auto" />
-              <h3 className="text-lg font-bold text-white mb-2">Email</h3>
-              <p className="text-blue-100">kwfastmile@gmail.com</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-              <Phone className="w-8 h-8 text-white mb-4 mx-auto" />
-              <h3 className="text-lg font-bold text-white mb-2">Phone</h3>
-              <p className="text-blue-100">+965 98571783</p>
-            </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+              Partner with FastMile Today
+            </h2>
+            <p className="text-xl sm:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+              Join Kuwait's most reliable delivery network. Get started with a custom plan tailored to your business needs.
+            </p>
+            
+            <Button 
+              size="lg" 
+              className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl mb-16"
+            >
+              Start Your Partnership
+            </Button>
           </div>
 
-          <Button 
-            size="lg" 
-            className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl"
-          >
-            Start Your Partnership
-          </Button>
-        </div>
-      </section>
-
-      {/* Footer with Map */}
-      <footer className="bg-black text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Contact Information */}
             <div>
-              <h3 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 leading-tight">Our Head Office</h3>
-              <div className="flex items-start space-x-6 mb-12">
-                <MapPin className="w-8 h-8 text-[#34b2ff] mt-2 flex-shrink-0" />
+              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-8 leading-tight">Get in Touch</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-6">
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                  <MessageCircle className="w-8 h-8 text-white mb-4" />
+                  <h4 className="text-lg font-bold text-white mb-2">WhatsApp</h4>
+                  <p className="text-blue-100">+965 98571783</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                  <Mail className="w-8 h-8 text-white mb-4" />
+                  <h4 className="text-lg font-bold text-white mb-2">Email</h4>
+                  <p className="text-blue-100">kwfastmile@gmail.com</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                  <Phone className="w-8 h-8 text-white mb-4" />
+                  <h4 className="text-lg font-bold text-white mb-2">Phone</h4>
+                  <p className="text-blue-100">+965 98571783</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Office Location */}
+            <div>
+              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-8 leading-tight">Our Head Office</h3>
+              <div className="flex items-start space-x-6 mb-8">
+                <MapPin className="w-8 h-8 text-white mt-2 flex-shrink-0" />
                 <div>
-                  <p className="text-xl lg:text-2xl font-bold mb-4">FastMile Head Office</p>
-                  <p className="text-lg lg:text-xl text-gray-300 leading-relaxed">
+                  <p className="text-xl font-bold text-white mb-4">FastMile Head Office</p>
+                  <p className="text-lg text-blue-100 leading-relaxed">
                     Kuwait City, Sharq, Block 2<br />
                     Ahmad Aljaber Street, CBK Building, Floor 1
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="bg-gray-800 rounded-3xl p-6 h-80">
-              <div className="w-full h-full bg-gray-700 rounded-2xl flex items-center justify-center">
-                <p className="text-xl text-gray-400">Google Maps Integration</p>
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 h-64 border border-white/20">
+                <div className="w-full h-full bg-white/20 rounded-xl flex items-center justify-center">
+                  <p className="text-lg text-white">Google Maps Integration</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="border-t border-gray-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <div className="flex items-center mb-6 md:mb-0">
-                <img 
-                  src="/lovable-uploads/cc33c8df-a916-45a8-b0e6-9554aa9d7d4d.png" 
-                  alt="FastMile" 
-                  className="h-10 w-auto"
-                />
-              </div>
-              
-              <div className="flex flex-wrap justify-center md:justify-start space-x-12 mb-6 md:mb-0">
-                <a href="#" className="text-lg text-gray-300 hover:text-white transition-colors">About</a>
-                <a href="#services" className="text-lg text-gray-300 hover:text-white transition-colors">Services</a>
-                <a href="#contact" className="text-lg text-gray-300 hover:text-white transition-colors">Contact</a>
-                <a href="#" className="text-lg text-gray-300 hover:text-white transition-colors">Become a Partner</a>
-              </div>
-
-              <div className="flex items-center space-x-6">
-                <a href="https://www.instagram.com/fastmilekw/" className="text-gray-300 hover:text-[#34b2ff] transition-colors">
-                  <Instagram className="w-8 h-8" />
-                </a>
-                <a href="#" className="text-gray-300 hover:text-[#34b2ff] transition-colors">
-                  <MessageCircle className="w-8 h-8" />
-                </a>
-              </div>
+      {/* Footer */}
+      <footer className="bg-black text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center mb-6 md:mb-0">
+              <img 
+                src="/lovable-uploads/cc33c8df-a916-45a8-b0e6-9554aa9d7d4d.png" 
+                alt="FastMile" 
+                className="h-10 w-auto"
+              />
             </div>
             
-            <div className="mt-12 pt-12 border-t border-gray-800 text-center">
-              <p className="text-lg text-gray-400">© 2025 FastMile. All rights reserved.</p>
+            <div className="flex flex-wrap justify-center md:justify-start space-x-12 mb-6 md:mb-0">
+              <a href="#" className="text-lg text-gray-300 hover:text-white transition-colors">About</a>
+              <a href="#services" className="text-lg text-gray-300 hover:text-white transition-colors">Services</a>
+              <a href="#contact" className="text-lg text-gray-300 hover:text-white transition-colors">Contact</a>
+              <a href="#" className="text-lg text-gray-300 hover:text-white transition-colors">Become a Partner</a>
             </div>
+
+            <div className="flex items-center space-x-6">
+              <a href="https://www.instagram.com/fastmilekw/" className="text-gray-300 hover:text-[#34b2ff] transition-colors">
+                <Instagram className="w-8 h-8" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-[#34b2ff] transition-colors">
+                <MessageCircle className="w-8 h-8" />
+              </a>
+            </div>
+          </div>
+          
+          <div className="mt-12 pt-12 border-t border-gray-800 text-center">
+            <p className="text-lg text-gray-400">© 2025 FastMile. All rights reserved.</p>
           </div>
         </div>
       </footer>
