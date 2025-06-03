@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
@@ -30,46 +29,67 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
-            <div className="mb-12 lg:mb-0">
-              <h1 className="text-4xl lg:text-6xl font-bold text-black leading-tight mb-6">
-                Delivery You Can Count On — 
-                <span className="text-[#34b2ff]"> Across All of Kuwait</span>
+      <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50/30 min-h-[90vh] flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center max-w-5xl mx-auto">
+            {/* Main Headline */}
+            <div className="mb-8">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-black leading-[0.9] mb-6 tracking-tight">
+                Delivery You Can
+                <br />
+                <span className="text-[#34b2ff] relative">
+                  Count On
+                  <div className="absolute -bottom-2 left-0 w-full h-1 bg-[#34b2ff]/20 rounded-full"></div>
+                </span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                From city streets to co-ops and malls — FastMile delivers reliably and fast.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-8 py-4 text-lg font-semibold transition-all hover:scale-105"
-                >
-                  Talk to Sales
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-2 border-[#34b2ff] text-[#34b2ff] hover:bg-[#34b2ff] hover:text-white px-8 py-4 text-lg font-semibold"
-                >
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  WhatsApp Us
-                </Button>
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-8">
+                Across All of Kuwait
               </div>
             </div>
-            <div className="relative">
-              <div className="bg-gradient-to-r from-[#34b2ff] to-blue-600 rounded-3xl p-8 transform rotate-3 shadow-xl">
-                <div className="bg-white rounded-2xl p-6 transform -rotate-3">
-                  <div className="text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-[#34b2ff] rounded-full mb-4">
-                      <Truck className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Fast & Reliable</h3>
-                    <p className="text-gray-600">Delivering across Kuwait with precision and care</p>
+
+            {/* Subheadline */}
+            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-600 mb-12 leading-relaxed max-w-4xl mx-auto font-light">
+              From city streets to co-ops and malls — FastMile delivers reliably and fast.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+              <Button 
+                size="lg" 
+                className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                Talk to Sales
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-3 border-[#34b2ff] text-[#34b2ff] hover:bg-[#34b2ff] hover:text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105"
+              >
+                <MessageCircle className="mr-3 h-6 w-6" />
+                WhatsApp Us
+              </Button>
+            </div>
+
+            {/* Modern Feature Card */}
+            <div className="relative max-w-2xl mx-auto">
+              <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100 relative overflow-hidden">
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#34b2ff]/5 to-transparent"></div>
+                
+                <div className="relative z-10 text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-[#34b2ff] rounded-2xl mb-6 shadow-lg">
+                    <Truck className="w-10 h-10 text-white" />
                   </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Fast & Reliable</h3>
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    Delivering across Kuwait with precision and care
+                  </p>
                 </div>
               </div>
+              
+              {/* Floating elements */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#34b2ff]/20 rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-[#34b2ff]/30 rounded-full animate-pulse delay-1000"></div>
             </div>
           </div>
         </div>
