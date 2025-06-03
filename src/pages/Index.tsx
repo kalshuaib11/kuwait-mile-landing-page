@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, MessageCircle, Mail, MapPin, Instagram } from "lucide-react";
+import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
 
 const Index = () => {
   return (
@@ -63,9 +63,7 @@ const Index = () => {
                 <div className="bg-white rounded-2xl p-6 transform -rotate-3">
                   <div className="text-center">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-[#34b2ff] rounded-full mb-4">
-                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 7h-3V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10h2a2 2 0 0 0 4 0h6a2 2 0 0 0 4 0h2V9a2 2 0 0 0-2-2zM4 5h10v2H4V5z"/>
-                      </svg>
+                      <Truck className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Fast & Reliable</h3>
                     <p className="text-gray-600">Delivering across Kuwait with precision and care</p>
@@ -89,14 +87,14 @@ const Index = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: "Restaurants", icon: "🍽️", desc: "From local cafés to fine dining" },
-              { title: "Online Stores", icon: "🛍️", desc: "E-commerce and retail delivery" },
-              { title: "Pharmacies", icon: "💊", desc: "Medical and health products" },
-              { title: "Grocery Shops", icon: "🛒", desc: "Fresh food and daily essentials" }
+              { title: "Restaurants", icon: Utensils, desc: "From local cafés to fine dining" },
+              { title: "Online Stores", icon: ShoppingBag, desc: "E-commerce and retail delivery" },
+              { title: "Pharmacies", icon: Pill, desc: "Medical and health products" },
+              { title: "Grocery Shops", icon: ShoppingCart, desc: "Fresh food and daily essentials" }
             ].map((item, index) => (
               <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#34b2ff]">
                 <CardContent className="p-8 text-center">
-                  <div className="text-4xl mb-4">{item.icon}</div>
+                  <item.icon className="w-12 h-12 text-[#34b2ff] mb-4 mx-auto" />
                   <h3 className="text-xl font-bold text-black mb-3">{item.title}</h3>
                   <p className="text-gray-600">{item.desc}</p>
                 </CardContent>
@@ -121,27 +119,27 @@ const Index = () => {
               {
                 title: "Local Last-Mile Delivery",
                 desc: "Door-to-door delivery across all Kuwait governorates with real-time tracking",
-                icon: "🚚"
+                icon: Truck
               },
               {
                 title: "Bulk Order Fulfillment",
                 desc: "Handle high-volume orders with our scalable delivery infrastructure",
-                icon: "📦"
+                icon: Package
               },
               {
                 title: "Merchant Dashboard",
                 desc: "Complete delivery management with logs, analytics, and customer insights",
-                icon: "📊"
+                icon: BarChart3
               },
               {
                 title: "Contract-Based Plans",
                 desc: "Flexible partnership models designed for growing businesses",
-                icon: "🤝"
+                icon: HandHeart
               }
             ].map((service, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
                 <div className="flex items-start space-x-4">
-                  <div className="text-3xl">{service.icon}</div>
+                  <service.icon className="w-8 h-8 text-[#34b2ff] mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-black mb-3">{service.title}</h3>
                     <p className="text-gray-600 leading-relaxed">{service.desc}</p>
@@ -165,37 +163,37 @@ const Index = () => {
               {
                 title: "We speak your street",
                 desc: "Hyperlocal focus with intimate knowledge of Kuwait's neighborhoods",
-                icon: "🗺️"
+                icon: Map
               },
               {
                 title: "Friendly local drivers",
                 desc: "Professional, courteous delivery partners who understand local culture",
-                icon: "👥"
+                icon: Users
               },
               {
                 title: "Real-time support",
                 desc: "Instant customer service through WhatsApp and phone support",
-                icon: "💬"
+                icon: Headphones
               },
               {
                 title: "Full Kuwait coverage",
                 desc: "From Kuwait City to Ahmadi - complete nationwide delivery network",
-                icon: "🇰🇼"
+                icon: MapIcon
               },
               {
                 title: "Smart dispatching",
                 desc: "AI-powered routing for fastest and most efficient deliveries",
-                icon: "🧠"
+                icon: Brain
               },
               {
                 title: "Reliable partnerships",
                 desc: "Build lasting business relationships with transparent pricing",
-                icon: "⭐"
+                icon: Star
               }
             ].map((feature, index) => (
               <div key={index} className="text-center group">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-[#34b2ff]/10 rounded-full mb-6 group-hover:bg-[#34b2ff] transition-colors">
-                  <span className="text-2xl group-hover:grayscale">{feature.icon}</span>
+                  <feature.icon className="w-8 h-8 text-[#34b2ff] group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-black mb-3">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
