@@ -252,37 +252,37 @@ const Index = () => {
       </section>
 
       {/* Get Started / Contact */}
-      <section id="contact" className="py-32 bg-[#34b2ff] relative overflow-hidden">
+      <section id="contact" className="py-24 bg-[#34b2ff] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#34b2ff] to-[#2899e6]"></div>
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-8 leading-tight">
-            Partner with FastMile <span className="block">Today</span>
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+            Partner with FastMile Today
           </h2>
-          <p className="text-2xl sm:text-3xl lg:text-4xl text-blue-100 mb-16 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-xl sm:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
             Join Kuwait's most reliable delivery network. Get started with a custom plan tailored to your business needs.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
-              <MessageCircle className="w-12 h-12 text-white mb-6 mx-auto" />
-              <h3 className="text-xl lg:text-2xl font-bold text-white mb-3">WhatsApp</h3>
-              <p className="text-lg lg:text-xl text-blue-100">+965 98571783</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+              <MessageCircle className="w-8 h-8 text-white mb-4 mx-auto" />
+              <h3 className="text-lg font-bold text-white mb-2">WhatsApp</h3>
+              <p className="text-blue-100">+965 98571783</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
-              <Mail className="w-12 h-12 text-white mb-6 mx-auto" />
-              <h3 className="text-xl lg:text-2xl font-bold text-white mb-3">Email</h3>
-              <p className="text-lg lg:text-xl text-blue-100">kwfastmile@gmail.com</p>
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+              <Mail className="w-8 h-8 text-white mb-4 mx-auto" />
+              <h3 className="text-lg font-bold text-white mb-2">Email</h3>
+              <p className="text-blue-100">kwfastmile@gmail.com</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
-              <Phone className="w-12 h-12 text-white mb-6 mx-auto" />
-              <h3 className="text-xl lg:text-2xl font-bold text-white mb-3">Phone</h3>
-              <p className="text-lg lg:text-xl text-blue-100">+965 98571783</p>
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+              <Phone className="w-8 h-8 text-white mb-4 mx-auto" />
+              <h3 className="text-lg font-bold text-white mb-2">Phone</h3>
+              <p className="text-blue-100">+965 98571783</p>
             </div>
           </div>
 
           <Button 
             size="lg" 
-            className="bg-white text-[#34b2ff] hover:bg-gray-100 px-16 py-6 text-xl lg:text-2xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl"
+            className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl"
           >
             Start Your Partnership
           </Button>
