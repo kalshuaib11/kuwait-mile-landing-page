@@ -214,7 +214,7 @@ const Index = () => {
       </section>
 
       {/* Trusted By */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 rounded-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h3 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-12 leading-tight">
