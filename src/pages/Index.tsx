@@ -248,7 +248,7 @@ const Index = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-2xl mb-6">
                 <Mail className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Email</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-blue-100 text-lg">kwfastmile@gmail.com</p>
             </div>
 
@@ -257,7 +257,7 @@ const Index = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-2xl mb-6">
                 <Phone className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Phone</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-blue-100 text-lg">+965 98571783</p>
             </div>
           </div>
@@ -284,9 +284,7 @@ const Index = () => {
 
           {/* CTA Button */}
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl">
-              Start Your Partnership
-            </Button>
+            <Button size="lg" className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl">Partner With Us</Button>
           </div>
         </div>
       </section>
