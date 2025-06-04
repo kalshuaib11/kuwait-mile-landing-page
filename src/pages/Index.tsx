@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
@@ -257,17 +256,37 @@ const Index = () => {
       </section>
 
       {/* Trusted By */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 rounded-sm">
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 rounded-sm overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center mb-12">
             <h3 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-12 leading-tight">
               {t.trustedBy.title} <span className="text-[#34b2ff]">{t.trustedBy.titleAccent}</span>
             </h3>
-            <div className="flex justify-center items-center space-x-24 opacity-4">
-              <img src="/lovable-uploads/08d95502-c271-44a8-a042-6e161edc5f65.png" alt="Bascota" className="h-24 w-auto object-contain" />
-              <img src="/lovable-uploads/5efbf4e2-d53d-4348-afa3-fd50555536d8.png" alt="Pharmazone" className="h-24 w-auto object-contain" />
-              <img src="/lovable-uploads/9c56aeed-f6ca-4c81-82e8-92c4fb0fe614.png" alt="Talabat" className="h-24 w-auto object-contain" />
+          </div>
+          
+          {/* Scrolling Logos Container */}
+          <div className="relative">
+            <div className="flex overflow-hidden">
+              <div className="flex animate-scroll space-x-16 md:space-x-24">
+                {/* First set of logos */}
+                <img src="/lovable-uploads/08d95502-c271-44a8-a042-6e161edc5f65.png" alt="Bascota" className="h-16 md:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0" />
+                <img src="/lovable-uploads/5efbf4e2-d53d-4348-afa3-fd50555536d8.png" alt="Pharmazone" className="h-16 md:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0" />
+                <img src="/lovable-uploads/9c56aeed-f6ca-4c81-82e8-92c4fb0fe614.png" alt="Talabat" className="h-16 md:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0" />
+                
+                {/* Duplicate set for seamless loop */}
+                <img src="/lovable-uploads/08d95502-c271-44a8-a042-6e161edc5f65.png" alt="Bascota" className="h-16 md:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0" />
+                <img src="/lovable-uploads/5efbf4e2-d53d-4348-afa3-fd50555536d8.png" alt="Pharmazone" className="h-16 md:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0" />
+                <img src="/lovable-uploads/9c56aeed-f6ca-4c81-82e8-92c4fb0fe614.png" alt="Talabat" className="h-16 md:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0" />
+                
+                {/* Third set for extra smoothness */}
+                <img src="/lovable-uploads/08d95502-c271-44a8-a042-6e161edc5f65.png" alt="Bascota" className="h-16 md:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0" />
+                <img src="/lovable-uploads/5efbf4e2-d53d-4348-afa3-fd50555536d8.png" alt="Pharmazone" className="h-16 md:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0" />
+                <img src="/lovable-uploads/9c56aeed-f6ca-4c81-82e8-92c4fb0fe614.png" alt="Talabat" className="h-16 md:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0" />
+              </div>
             </div>
+            
+            {/* Pause on hover overlay */}
+            <div className="absolute inset-0 hover:[&>div>div]:pause"></div>
           </div>
         </div>
       </section>
