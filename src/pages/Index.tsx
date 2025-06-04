@@ -1,21 +1,14 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <img 
-                src="/lovable-uploads/9a923dd4-975a-42f0-bf9b-51a203a60a33.png" 
-                alt="FastMile" 
-                className="h-8 w-auto"
-              />
+              <img src="/lovable-uploads/9a923dd4-975a-42f0-bf9b-51a203a60a33.png" alt="FastMile" className="h-8 w-auto" />
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-gray-600 hover:text-black transition-colors">Services</a>
@@ -55,17 +48,10 @@ const Index = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Button 
-                size="lg" 
-                className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-lg hover:shadow-xl"
-              >
+              <Button size="lg" className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-lg hover:shadow-xl">
                 Talk to Sales
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-3 border-[#34b2ff] text-[#34b2ff] hover:bg-[#34b2ff] hover:text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105"
-              >
+              <Button variant="outline" size="lg" className="border-3 border-[#34b2ff] text-[#34b2ff] hover:bg-[#34b2ff] hover:text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105">
                 <MessageCircle className="mr-3 h-6 w-6" />
                 WhatsApp Us
               </Button>
@@ -109,13 +95,23 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { title: "Restaurants", icon: Utensils, desc: "From local cafés to fine dining establishments" },
-              { title: "Online Stores", icon: ShoppingBag, desc: "E-commerce and retail delivery solutions" },
-              { title: "Pharmacies", icon: Pill, desc: "Medical and health products delivery" },
-              { title: "Grocery Shops", icon: ShoppingCart, desc: "Fresh food and daily essentials" }
-            ].map((item, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-[#34b2ff] bg-white hover:bg-gradient-to-br hover:from-blue-50/50 hover:to-white rounded-3xl overflow-hidden">
+            {[{
+            title: "Restaurants",
+            icon: Utensils,
+            desc: "From local cafés to fine dining establishments"
+          }, {
+            title: "Online Stores",
+            icon: ShoppingBag,
+            desc: "E-commerce and retail delivery solutions"
+          }, {
+            title: "Pharmacies",
+            icon: Pill,
+            desc: "Medical and health products delivery"
+          }, {
+            title: "Grocery Shops",
+            icon: ShoppingCart,
+            desc: "Fresh food and daily essentials"
+          }].map((item, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-[#34b2ff] bg-white hover:bg-gradient-to-br hover:from-blue-50/50 hover:to-white rounded-3xl overflow-hidden">
                 <CardContent className="p-10 text-center">
                   <div className="inline-flex items-center justify-center w-20 h-20 bg-[#34b2ff]/10 rounded-2xl mb-8 group-hover:bg-[#34b2ff] transition-all duration-300">
                     <item.icon className="w-10 h-10 text-[#34b2ff] group-hover:text-white transition-colors" />
@@ -123,8 +119,7 @@ const Index = () => {
                   <h3 className="text-2xl lg:text-3xl font-bold text-black mb-4">{item.title}</h3>
                   <p className="text-lg text-gray-600 leading-relaxed">{item.desc}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -142,29 +137,23 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {[
-              {
-                title: "Local Last-Mile Delivery",
-                desc: "Door-to-door delivery across all Kuwait governorates with real-time tracking and instant notifications",
-                icon: Truck
-              },
-              {
-                title: "Bulk Order Fulfillment",
-                desc: "Handle high-volume orders with our scalable delivery infrastructure and dedicated support team",
-                icon: Package
-              },
-              {
-                title: "Merchant Dashboard",
-                desc: "Complete delivery management with logs, analytics, and customer insights for data-driven decisions",
-                icon: BarChart3
-              },
-              {
-                title: "Contract-Based Plans",
-                desc: "Flexible partnership models designed for growing businesses with custom pricing and priority support",
-                icon: HandHeart
-              }
-            ].map((service, index) => (
-              <div key={index} className="bg-white rounded-3xl p-12 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#34b2ff]/20">
+            {[{
+            title: "Local Last-Mile Delivery",
+            desc: "Door-to-door delivery across all Kuwait governorates with real-time tracking and instant notifications",
+            icon: Truck
+          }, {
+            title: "Bulk Order Fulfillment",
+            desc: "Handle high-volume orders with our scalable delivery infrastructure and dedicated support team",
+            icon: Package
+          }, {
+            title: "Merchant Dashboard",
+            desc: "Complete delivery management with logs, analytics, and customer insights for data-driven decisions",
+            icon: BarChart3
+          }, {
+            title: "Contract-Based Plans",
+            desc: "Flexible partnership models designed for growing businesses with custom pricing and priority support",
+            icon: HandHeart
+          }].map((service, index) => <div key={index} className="bg-white rounded-3xl p-12 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#34b2ff]/20">
                 <div className="flex items-start space-x-6">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-[#34b2ff]/10 rounded-2xl flex-shrink-0">
                     <service.icon className="w-8 h-8 text-[#34b2ff]" />
@@ -174,8 +163,7 @@ const Index = () => {
                     <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">{service.desc}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -190,46 +178,37 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {[
-              {
-                title: "We speak your street",
-                desc: "Hyperlocal focus with intimate knowledge of Kuwait's neighborhoods, from Salmiya to Hawalli",
-                icon: Map
-              },
-              {
-                title: "Friendly local drivers",
-                desc: "Professional, courteous delivery partners who understand local culture and customer expectations",
-                icon: Users
-              },
-              {
-                title: "Real-time support",
-                desc: "Instant customer service through WhatsApp and phone support available throughout delivery hours",
-                icon: Headphones
-              },
-              {
-                title: "Full Kuwait coverage",
-                desc: "From Kuwait City to Ahmadi - complete nationwide delivery network covering all governorates",
-                icon: MapIcon
-              },
-              {
-                title: "Smart dispatching",
-                desc: "AI-powered routing for fastest and most efficient deliveries, reducing wait times and costs",
-                icon: Brain
-              },
-              {
-                title: "Reliable partnerships",
-                desc: "Build lasting business relationships with transparent pricing and dedicated account management",
-                icon: Star
-              }
-            ].map((feature, index) => (
-              <div key={index} className="text-center group">
+            {[{
+            title: "We speak your street",
+            desc: "Hyperlocal focus with intimate knowledge of Kuwait's neighborhoods, from Salmiya to Hawalli",
+            icon: Map
+          }, {
+            title: "Friendly local drivers",
+            desc: "Professional, courteous delivery partners who understand local culture and customer expectations",
+            icon: Users
+          }, {
+            title: "Real-time support",
+            desc: "Instant customer service through WhatsApp and phone support available throughout delivery hours",
+            icon: Headphones
+          }, {
+            title: "Full Kuwait coverage",
+            desc: "From Kuwait City to Ahmadi - complete nationwide delivery network covering all governorates",
+            icon: MapIcon
+          }, {
+            title: "Smart dispatching",
+            desc: "AI-powered routing for fastest and most efficient deliveries, reducing wait times and costs",
+            icon: Brain
+          }, {
+            title: "Reliable partnerships",
+            desc: "Build lasting business relationships with transparent pricing and dedicated account management",
+            icon: Star
+          }].map((feature, index) => <div key={index} className="text-center group">
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-[#34b2ff]/10 rounded-3xl mb-8 group-hover:bg-[#34b2ff] transition-all duration-300 group-hover:scale-110">
                   <feature.icon className="w-12 h-12 text-[#34b2ff] group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-2xl lg:text-3xl font-bold text-black mb-4 leading-tight">{feature.title}</h3>
                 <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-sm mx-auto">{feature.desc}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -241,22 +220,10 @@ const Index = () => {
             <h3 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-12 leading-tight">
               Trusted By Kuwait's <span className="text-[#34b2ff]">Leading Businesses</span>
             </h3>
-            <div className="flex justify-center items-center space-x-16 opacity-70">
-              <img 
-                src="/lovable-uploads/08d95502-c271-44a8-a042-6e161edc5f65.png" 
-                alt="Bascota" 
-                className="h-24 w-auto object-contain"
-              />
-              <img 
-                src="/lovable-uploads/5efbf4e2-d53d-4348-afa3-fd50555536d8.png" 
-                alt="Pharmazone" 
-                className="h-24 w-auto object-contain"
-              />
-              <img 
-                src="/lovable-uploads/9c56aeed-f6ca-4c81-82e8-92c4fb0fe614.png" 
-                alt="Talabat" 
-                className="h-24 w-auto object-contain"
-              />
+            <div className="flex justify-center items-center space-x-15 opacity-4">
+              <img src="/lovable-uploads/08d95502-c271-44a8-a042-6e161edc5f65.png" alt="Bascota" className="h-48 w-auto object-contain" />
+              <img src="/lovable-uploads/5efbf4e2-d53d-4348-afa3-fd50555536d8.png" alt="Pharmazone" className="h-40 w-auto object-contain" />
+              <img src="/lovable-uploads/9c56aeed-f6ca-4c81-82e8-92c4fb0fe614.png" alt="Talabat" className="h-24 w-auto object-contain" />
             </div>
           </div>
         </div>
@@ -309,25 +276,15 @@ const Index = () => {
             
             {/* Compact Google Maps Embed */}
             <div className="w-full max-w-2xl mx-auto h-64 rounded-2xl overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14434.658469325736!2d47.9706229!3d29.3749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf85fd5ac93315%3A0xd542b96c60b7f3d2!2sSharq%2C%20Kuwait%20City%2C%20Kuwait!5e0!3m2!1sen!2s!4v1735919234567!5m2!1sen!2s"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-2xl"
-              ></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14434.658469325736!2d47.9706229!3d29.3749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf85fd5ac93315%3A0xd542b96c60b7f3d2!2sSharq%2C%20Kuwait%20City%2C%20Kuwait!5e0!3m2!1sen!2s!4v1735919234567!5m2!1sen!2s" width="100%" height="100%" style={{
+              border: 0
+            }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-2xl"></iframe>
             </div>
           </div>
 
           {/* CTA Button */}
           <div className="text-center mt-12">
-            <Button 
-              size="lg" 
-              className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl"
-            >
+            <Button size="lg" className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl">
               Start Your Partnership
             </Button>
           </div>
@@ -339,11 +296,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-6 md:mb-0">
-              <img 
-                src="/lovable-uploads/9a923dd4-975a-42f0-bf9b-51a203a60a33.png" 
-                alt="FastMile" 
-                className="h-10 w-auto"
-              />
+              <img src="/lovable-uploads/9a923dd4-975a-42f0-bf9b-51a203a60a33.png" alt="FastMile" className="h-10 w-auto" />
             </div>
             
             <div className="flex flex-wrap justify-center md:justify-start space-x-12 mb-6 md:mb-0">
@@ -365,8 +318,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
