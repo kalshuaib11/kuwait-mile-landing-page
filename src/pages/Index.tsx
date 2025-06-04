@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
@@ -7,7 +8,7 @@ import LanguageToggle from "@/components/LanguageToggle";
 import MobileNav from "@/components/MobileNav";
 
 const Index = () => {
-  const { language, isRTL } = useLanguage();
+  const { language, isRTL, toggleLanguage } = useLanguage();
   const t = translations[language];
 
   const handlePhoneCall = () => {
@@ -57,7 +58,15 @@ const Index = () => {
             </div>
             
             {/* Mobile Navigation */}
-            <div className="md:hidden">
+            <div className="md:hidden flex items-center space-x-3 rtl:space-x-reverse">
+              {/* Arabic Toggle Button */}
+              <button
+                onClick={toggleLanguage}
+                className="text-black hover:text-[#34b2ff] transition-colors text-xl font-bold px-2 py-1 rounded cursor-pointer"
+                aria-label="Toggle language"
+              >
+                {language === 'en' ? 'ع' : 'EN'}
+              </button>
               <MobileNav />
             </div>
           </div>
