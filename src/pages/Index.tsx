@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
@@ -35,21 +34,17 @@ const Index = () => {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
-              <a href="#who-we-serve" className="text-gray-600 hover:text-black transition-colors flex items-center space-x-2 rtl:space-x-reverse">
-                <span>{t.nav.whoWeServe}</span>
-                {language === 'ar' && <span className="text-[#34b2ff] font-bold">ع</span>}
+              <a href="#who-we-serve" className="text-gray-600 hover:text-black transition-colors">
+                {t.nav.whoWeServe}
               </a>
-              <a href="#services" className="text-gray-600 hover:text-black transition-colors flex items-center space-x-2 rtl:space-x-reverse">
-                <span>{t.nav.services}</span>
-                {language === 'ar' && <span className="text-[#34b2ff] font-bold">ع</span>}
+              <a href="#services" className="text-gray-600 hover:text-black transition-colors">
+                {t.nav.services}
               </a>
-              <a href="#why-us" className="text-gray-600 hover:text-black transition-colors flex items-center space-x-2 rtl:space-x-reverse">
-                <span>{t.nav.whyUs}</span>
-                {language === 'ar' && <span className="text-[#34b2ff] font-bold">ع</span>}
+              <a href="#why-us" className="text-gray-600 hover:text-black transition-colors">
+                {t.nav.whyUs}
               </a>
-              <a href="#contact" className="text-gray-600 hover:text-black transition-colors flex items-center space-x-2 rtl:space-x-reverse">
-                <span>{t.nav.contact}</span>
-                {language === 'ar' && <span className="text-[#34b2ff] font-bold">ع</span>}
+              <a href="#contact" className="text-gray-600 hover:text-black transition-colors">
+                {t.nav.contact}
               </a>
               <LanguageToggle />
               <Button onClick={handlePhoneCall} className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-6">
