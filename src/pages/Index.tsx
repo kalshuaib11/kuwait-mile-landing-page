@@ -246,7 +246,7 @@ const Index = () => {
             <h3 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-12 leading-tight">
               Trusted By Kuwait's <span className="text-[#34b2ff]">Leading Businesses</span>
             </h3>
-            <div className="flex justify-center items-center space-x-15 opacity-4">
+            <div className="flex justify-center items-center space-x-16 opacity-4">
               <img src="/lovable-uploads/08d95502-c271-44a8-a042-6e161edc5f65.png" alt="Bascota" className="h-24 w-auto object-contain" />
               <img src="/lovable-uploads/5efbf4e2-d53d-4348-afa3-fd50555536d8.png" alt="Pharmazone" className="h-24 w-auto object-contain" />
               <img src="/lovable-uploads/9c56aeed-f6ca-4c81-82e8-92c4fb0fe614.png" alt="Talabat" className="h-24 w-auto object-contain" />
