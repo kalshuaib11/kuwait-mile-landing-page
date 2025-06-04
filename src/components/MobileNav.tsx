@@ -52,27 +52,31 @@ const MobileNav = () => {
             <nav className="space-y-2 px-6">
               <button
                 onClick={() => handleNavClick('#who-we-serve')}
-                className="block w-full text-left py-3 text-lg text-gray-600 hover:text-black transition-colors border-b border-gray-100"
+                className="block w-full text-left py-3 text-lg text-gray-600 hover:text-black transition-colors border-b border-gray-100 flex items-center justify-between"
               >
-                {t.nav.whoWeServe}
+                <span>{t.nav.whoWeServe}</span>
+                {language === 'ar' && <span className="text-[#34b2ff] font-bold">ع</span>}
               </button>
               <button
                 onClick={() => handleNavClick('#services')}
-                className="block w-full text-left py-3 text-lg text-gray-600 hover:text-black transition-colors border-b border-gray-100"
+                className="block w-full text-left py-3 text-lg text-gray-600 hover:text-black transition-colors border-b border-gray-100 flex items-center justify-between"
               >
-                {t.nav.services}
+                <span>{t.nav.services}</span>
+                {language === 'ar' && <span className="text-[#34b2ff] font-bold">ع</span>}
               </button>
               <button
                 onClick={() => handleNavClick('#why-us')}
-                className="block w-full text-left py-3 text-lg text-gray-600 hover:text-black transition-colors border-b border-gray-100"
+                className="block w-full text-left py-3 text-lg text-gray-600 hover:text-black transition-colors border-b border-gray-100 flex items-center justify-between"
               >
-                {t.nav.whyUs}
+                <span>{t.nav.whyUs}</span>
+                {language === 'ar' && <span className="text-[#34b2ff] font-bold">ع</span>}
               </button>
               <button
                 onClick={() => handleNavClick('#contact')}
-                className="block w-full text-left py-3 text-lg text-gray-600 hover:text-black transition-colors border-b border-gray-100"
+                className="block w-full text-left py-3 text-lg text-gray-600 hover:text-black transition-colors border-b border-gray-100 flex items-center justify-between"
               >
-                {t.nav.contact}
+                <span>{t.nav.contact}</span>
+                {language === 'ar' && <span className="text-[#34b2ff] font-bold">ع</span>}
               </button>
             </nav>
           </div>
