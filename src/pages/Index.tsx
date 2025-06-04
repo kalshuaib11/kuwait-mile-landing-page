@@ -1,8 +1,15 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/data/translations";
+import LanguageToggle from "@/components/LanguageToggle";
 
 const Index = () => {
+  const { language, isRTL } = useLanguage();
+  const t = translations[language];
+
   const handlePhoneCall = () => {
     window.location.href = "tel:+96598571783";
   };
@@ -15,7 +22,7 @@ const Index = () => {
     window.open("https://wa.me/96598571783?text=Hello%20FastMile,%20I%27m%20a%20business%20owner%20interested%20in%20partnering%20with%20you.", "_blank");
   };
 
-  return <div className="min-h-screen bg-white">
+  return <div className={`min-h-screen bg-white ${isRTL ? 'font-cairo' : ''}`}>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,16 +30,17 @@ const Index = () => {
             <div className="flex items-center">
               <img alt="FastMile" src="/lovable-uploads/b20a403a-ada4-4723-a619-b6fe026270fd.png" className="h-12 w-auto" />
             </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#who-we-serve" className="text-gray-600 hover:text-black transition-colors">Who We Serve</a>
-              <a href="#services" className="text-gray-600 hover:text-black transition-colors">Services</a>
-              <a href="#why-us" className="text-gray-600 hover:text-black transition-colors">Why Us</a>
-              <a href="#contact" className="text-gray-600 hover:text-black transition-colors">Contact</a>
+            <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
+              <a href="#who-we-serve" className="text-gray-600 hover:text-black transition-colors">{t.nav.whoWeServe}</a>
+              <a href="#services" className="text-gray-600 hover:text-black transition-colors">{t.nav.services}</a>
+              <a href="#why-us" className="text-gray-600 hover:text-black transition-colors">{t.nav.whyUs}</a>
+              <a href="#contact" className="text-gray-600 hover:text-black transition-colors">{t.nav.contact}</a>
+              <LanguageToggle />
               <Button 
                 onClick={handlePhoneCall}
                 className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-6"
               >
-                Talk to Sales
+                {t.nav.talkToSales}
               </Button>
             </div>
           </div>
@@ -46,21 +54,21 @@ const Index = () => {
             {/* Main Headline */}
             <div className="mb-8">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-black leading-[0.9] mb-6 tracking-tight">
-                Delivery You Can
+                {t.hero.headline}
                 <br />
                 <span className="text-[#34b2ff] relative">
-                  Count On
+                  {t.hero.headlineAccent}
                   <div className="absolute -bottom-2 left-0 w-full h-1 bg-[#34b2ff]/20 rounded-full"></div>
                 </span>
               </h1>
               <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-8">
-                Across All of Kuwait
+                {t.hero.subheadline}
               </div>
             </div>
 
             {/* Subheadline */}
             <p className="text-xl sm:text-2xl lg:text-3xl text-gray-600 mb-12 leading-relaxed max-w-4xl mx-auto font-light">
-              From city streets to co-ops and malls — FastMile delivers reliably and fast.
+              {t.hero.description}
             </p>
 
             {/* CTA Buttons */}
@@ -70,7 +78,7 @@ const Index = () => {
                 onClick={handlePhoneCall}
                 className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                Talk to Sales
+                {t.hero.talkToSales}
               </Button>
               <Button 
                 variant="outline" 
@@ -78,8 +86,8 @@ const Index = () => {
                 onClick={handleWhatsAppGeneral}
                 className="border-3 border-[#34b2ff] text-[#34b2ff] hover:bg-[#34b2ff] hover:text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105"
               >
-                <MessageCircle className="mr-3 h-6 w-6" />
-                WhatsApp Us
+                <MessageCircle className={`${isRTL ? 'ml-3' : 'mr-3'} h-6 w-6`} />
+                {t.hero.whatsappUs}
               </Button>
             </div>
 
@@ -93,9 +101,9 @@ const Index = () => {
                   <div className="inline-flex items-center justify-center w-20 h-20 bg-[#34b2ff] rounded-2xl mb-6 shadow-lg">
                     <Truck className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Fast & Reliable</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{t.hero.featureTitle}</h3>
                   <p className="text-lg text-gray-600 leading-relaxed">
-                    Delivering across Kuwait with precision and care
+                    {t.hero.featureDesc}
                   </p>
                 </div>
               </div>
@@ -113,30 +121,30 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-8 leading-tight">
-              Who We <span className="text-[#34b2ff]">Serve</span>
+              {t.whoWeServe.title} <span className="text-[#34b2ff]">{t.whoWeServe.titleAccent}</span>
             </h2>
             <p className="text-2xl sm:text-3xl lg:text-4xl text-gray-600 max-w-5xl mx-auto leading-relaxed font-light">
-              Whether you're a local café or a fast-growing e-store — we've got your delivery covered.
+              {t.whoWeServe.subtitle}
             </p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[{
-            title: "Restaurants",
+            title: t.whoWeServe.restaurants,
             icon: Utensils,
-            desc: "From local cafés to fine dining establishments"
+            desc: t.whoWeServe.restaurantsDesc
           }, {
-            title: "Online Stores",
+            title: t.whoWeServe.onlineStores,
             icon: ShoppingBag,
-            desc: "E-commerce and retail delivery solutions"
+            desc: t.whoWeServe.onlineStoresDesc
           }, {
-            title: "Pharmacies",
+            title: t.whoWeServe.pharmacies,
             icon: Pill,
-            desc: "Medical and health products delivery"
+            desc: t.whoWeServe.pharmaciesDesc
           }, {
-            title: "Grocery Shops",
+            title: t.whoWeServe.groceryShops,
             icon: ShoppingCart,
-            desc: "Fresh food and daily essentials"
+            desc: t.whoWeServe.groceryShopsDesc
           }].map((item, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-[#34b2ff] bg-white hover:bg-gradient-to-br hover:from-blue-50/50 hover:to-white rounded-3xl overflow-hidden">
                 <CardContent className="p-10 text-center">
                   <div className="inline-flex items-center justify-center w-20 h-20 bg-[#34b2ff]/10 rounded-2xl mb-8 group-hover:bg-[#34b2ff] transition-all duration-300">
@@ -155,32 +163,32 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-8 leading-tight">
-              Our <span className="text-[#34b2ff]">Services</span>
+              {t.services.title} <span className="text-[#34b2ff]">{t.services.titleAccent}</span>
             </h2>
             <p className="text-2xl sm:text-3xl lg:text-4xl text-gray-600 max-w-5xl mx-auto leading-relaxed font-light">
-              Comprehensive delivery solutions tailored for Kuwait's business landscape
+              {t.services.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[{
-            title: "Local Last-Mile Delivery",
-            desc: "Door-to-door delivery across all Kuwait governorates with real-time tracking and instant notifications",
+            title: t.services.localDelivery,
+            desc: t.services.localDeliveryDesc,
             icon: Truck
           }, {
-            title: "Bulk Order Fulfillment",
-            desc: "Handle high-volume orders with our scalable delivery infrastructure and dedicated support team",
+            title: t.services.bulkOrders,
+            desc: t.services.bulkOrdersDesc,
             icon: Package
           }, {
-            title: "Merchant Dashboard",
-            desc: "Complete delivery management with logs, analytics, and customer insights for data-driven decisions",
+            title: t.services.merchantDashboard,
+            desc: t.services.merchantDashboardDesc,
             icon: BarChart3
           }, {
-            title: "Contract-Based Plans",
-            desc: "Flexible partnership models designed for growing businesses with custom pricing and priority support",
+            title: t.services.contractPlans,
+            desc: t.services.contractPlansDesc,
             icon: HandHeart
           }].map((service, index) => <div key={index} className="bg-white rounded-3xl p-12 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#34b2ff]/20">
-                <div className="flex items-start space-x-6">
+                <div className={`flex items-start ${isRTL ? 'space-x-reverse' : ''} space-x-6`}>
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-[#34b2ff]/10 rounded-2xl flex-shrink-0">
                     <service.icon className="w-8 h-8 text-[#34b2ff]" />
                   </div>
@@ -199,34 +207,34 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-8 leading-tight">
-              Why Choose <span className="text-[#34b2ff]">FastMile</span>
+              {t.whyUs.title} <span className="text-[#34b2ff]">{t.whyUs.titleAccent}</span>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {[{
-            title: "We speak your street",
-            desc: "Hyperlocal focus with intimate knowledge of Kuwait's neighborhoods, from Salmiya to Hawalli",
+            title: t.whyUs.speakStreet,
+            desc: t.whyUs.speakStreetDesc,
             icon: Map
           }, {
-            title: "Friendly local drivers",
-            desc: "Professional, courteous delivery partners who understand local culture and customer expectations",
+            title: t.whyUs.friendlyDrivers,
+            desc: t.whyUs.friendlyDriversDesc,
             icon: Users
           }, {
-            title: "Real-time support",
-            desc: "Instant customer service through WhatsApp and phone support available throughout delivery hours",
+            title: t.whyUs.realtimeSupport,
+            desc: t.whyUs.realtimeSupportDesc,
             icon: Headphones
           }, {
-            title: "Full Kuwait coverage",
-            desc: "From Kuwait City to Ahmadi - complete nationwide delivery network covering all governorates",
+            title: t.whyUs.fullCoverage,
+            desc: t.whyUs.fullCoverageDesc,
             icon: MapIcon
           }, {
-            title: "Smart dispatching",
-            desc: "AI-powered routing for fastest and most efficient deliveries, reducing wait times and costs",
+            title: t.whyUs.smartDispatching,
+            desc: t.whyUs.smartDispatchingDesc,
             icon: Brain
           }, {
-            title: "Reliable partnerships",
-            desc: "Build lasting business relationships with transparent pricing and dedicated account management",
+            title: t.whyUs.reliablePartnerships,
+            desc: t.whyUs.reliablePartnershipsDesc,
             icon: Star
           }].map((feature, index) => <div key={index} className="text-center group">
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-[#34b2ff]/10 rounded-3xl mb-8 group-hover:bg-[#34b2ff] transition-all duration-300 group-hover:scale-110">
@@ -244,7 +252,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h3 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-12 leading-tight">
-              Trusted By Kuwait's <span className="text-[#34b2ff]">Leading Businesses</span>
+              {t.trustedBy.title} <span className="text-[#34b2ff]">{t.trustedBy.titleAccent}</span>
             </h3>
             <div className="flex justify-center items-center space-x-16 opacity-4">
               <img src="/lovable-uploads/08d95502-c271-44a8-a042-6e161edc5f65.png" alt="Bascota" className="h-24 w-auto object-contain" />
@@ -260,10 +268,10 @@ const Index = () => {
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
-              Partner with FastMile Today
+              {t.contact.title}
             </h2>
             <p className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join Kuwait's most reliable delivery network. Get started with a custom plan tailored to your business needs.
+              {t.contact.subtitle}
             </p>
           </div>
 
@@ -274,7 +282,7 @@ const Index = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-2xl mb-6">
                 <Mail className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Email Us</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">{t.contact.emailUs}</h3>
               <p className="text-blue-100 text-lg">kwfastmile@gmail.com</p>
             </div>
 
@@ -286,7 +294,7 @@ const Index = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-2xl mb-6">
                 <Phone className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Call Us</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">{t.contact.callUs}</h3>
               <p className="text-blue-100 text-lg">+965 98571783</p>
             </div>
           </div>
@@ -294,13 +302,11 @@ const Index = () => {
           {/* Office Location */}
           <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-6">
-              <MapPin className="w-8 h-8 text-white mr-3" />
-              <h3 className="text-2xl font-bold text-white">Our Head Office</h3>
+              <MapPin className={`w-8 h-8 text-white ${isRTL ? 'ml-3' : 'mr-3'}`} />
+              <h3 className="text-2xl font-bold text-white">{t.contact.headOffice}</h3>
             </div>
-            <p className="text-blue-100 text-center text-lg mb-8 leading-relaxed">
-              Sharq, Block 2, Ahmad Aljaber Street<br />
-              CBK Building, Floor 1<br />
-              Kuwait City, Kuwait
+            <p className="text-blue-100 text-center text-lg mb-8 leading-relaxed whitespace-pre-line">
+              {t.contact.address}
             </p>
             
             {/* Compact Google Maps Embed */}
@@ -318,7 +324,7 @@ const Index = () => {
               onClick={handleWhatsAppPartnership}
               className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl"
             >
-              Partner With Us
+              {t.contact.partnerWithUs}
             </Button>
           </div>
         </div>
@@ -332,14 +338,14 @@ const Index = () => {
               <img src="/lovable-uploads/9a923dd4-975a-42f0-bf9b-51a203a60a33.png" alt="FastMile" className="h-24 w-auto" />
             </div>
             
-            <div className="flex flex-wrap justify-center md:justify-start space-x-12 mb-6 md:mb-0">
-              <a href="#" className="text-lg text-gray-300 hover:text-white transition-colors">About</a>
-              <a href="#services" className="text-lg text-gray-300 hover:text-white transition-colors">Services</a>
-              <a href="#contact" className="text-lg text-gray-300 hover:text-white transition-colors">Contact</a>
-              <a href="#" className="text-lg text-gray-300 hover:text-white transition-colors">Become a Partner</a>
+            <div className={`flex flex-wrap justify-center md:justify-start ${isRTL ? 'space-x-reverse' : ''} space-x-12 mb-6 md:mb-0`}>
+              <a href="#" className="text-lg text-gray-300 hover:text-white transition-colors">{t.footer.about}</a>
+              <a href="#services" className="text-lg text-gray-300 hover:text-white transition-colors">{t.footer.services}</a>
+              <a href="#contact" className="text-lg text-gray-300 hover:text-white transition-colors">{t.footer.contact}</a>
+              <a href="#" className="text-lg text-gray-300 hover:text-white transition-colors">{t.footer.becomePartner}</a>
             </div>
 
-            <div className="flex items-center space-x-6">
+            <div className={`flex items-center ${isRTL ? 'space-x-reverse' : ''} space-x-6`}>
               <a href="https://www.instagram.com/fastmilekw/" className="text-gray-300 hover:text-[#34b2ff] transition-colors">
                 <Instagram className="w-8 h-8" />
               </a>
@@ -347,7 +353,7 @@ const Index = () => {
           </div>
           
           <div className="mt-12 pt-12 border-t border-gray-800 text-center">
-            <p className="text-lg text-gray-400">© 2025 FastMile. All rights reserved.</p>
+            <p className="text-lg text-gray-400">{t.footer.copyright}</p>
           </div>
         </div>
       </footer>
