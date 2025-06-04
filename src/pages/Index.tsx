@@ -1,25 +1,29 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/data/translations";
 import LanguageToggle from "@/components/LanguageToggle";
+
 const Index = () => {
-  const {
-    language,
-    isRTL
-  } = useLanguage();
+  const { language, isRTL } = useLanguage();
   const t = translations[language];
+
   const handlePhoneCall = () => {
     window.location.href = "tel:+96598571783";
   };
+
   const handleWhatsAppGeneral = () => {
     window.open("https://wa.me/96598571783?text=Hello%20FastMile,%20I%27m%20interested%20in%20your%20delivery%20services.", "_blank");
   };
+
   const handleWhatsAppPartnership = () => {
     window.open("https://wa.me/96598571783?text=Hello%20FastMile,%20I%27m%20a%20business%20owner%20interested%20in%20partnering%20with%20you.", "_blank");
   };
-  return <div className={`min-h-screen bg-white ${isRTL ? 'font-cairo' : ''}`}>
+
+  return (
+    <div className={`min-h-screen bg-white ${isRTL ? 'font-cairo' : ''}`}>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,21 +51,21 @@ const Index = () => {
           <div className="text-center max-w-5xl mx-auto">
             {/* Main Headline */}
             <div className="mb-8">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-black leading-[0.9] mb-6 tracking-tight font-extrabold">
+              <h1 className={`text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-black mb-6 tracking-tight font-extrabold ${isRTL ? 'leading-[1.3] font-bold' : 'leading-[0.9]'}`}>
                 {t.hero.headline}
                 <br />
-                <span className="text-[#34b2ff] relative font-extrabold">
+                <span className={`text-[#34b2ff] relative font-extrabold ${isRTL ? 'block mt-4' : ''}`}>
                   {t.hero.headlineAccent}
                   <div className="absolute -bottom-2 left-0 w-full h-1 bg-[#34b2ff]/20 rounded-full"></div>
                 </span>
               </h1>
-              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-8">
+              <div className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-8 ${isRTL ? 'leading-[1.4] mt-8' : ''}`}>
                 {t.hero.subheadline}
               </div>
             </div>
 
             {/* Subheadline */}
-            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-600 mb-12 leading-relaxed max-w-4xl mx-auto font-light">
+            <p className={`text-xl sm:text-2xl lg:text-3xl text-gray-600 mb-12 max-w-4xl mx-auto font-light ${isRTL ? 'leading-[1.6]' : 'leading-relaxed'}`}>
               {t.hero.description}
             </p>
 
@@ -87,7 +91,7 @@ const Index = () => {
                     <Truck className="w-10 h-10 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">{t.hero.featureTitle}</h3>
-                  <p className="text-lg text-gray-600 leading-relaxed">
+                  <p className={`text-lg text-gray-600 ${isRTL ? 'leading-[1.6]' : 'leading-relaxed'}`}>
                     {t.hero.featureDesc}
                   </p>
                 </div>
@@ -239,7 +243,7 @@ const Index = () => {
             <h3 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-12 leading-tight">
               {t.trustedBy.title} <span className="text-[#34b2ff]">{t.trustedBy.titleAccent}</span>
             </h3>
-            <div className="flex justify-center items-center space-x-16 opacity-4">
+            <div className="flex justify-center items-center space-x-24 opacity-4">
               <img src="/lovable-uploads/08d95502-c271-44a8-a042-6e161edc5f65.png" alt="Bascota" className="h-24 w-auto object-contain" />
               <img src="/lovable-uploads/5efbf4e2-d53d-4348-afa3-fd50555536d8.png" alt="Pharmazone" className="h-24 w-auto object-contain" />
               <img src="/lovable-uploads/9c56aeed-f6ca-4c81-82e8-92c4fb0fe614.png" alt="Talabat" className="h-24 w-auto object-contain" />
@@ -335,6 +339,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
