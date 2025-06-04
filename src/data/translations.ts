@@ -85,7 +85,7 @@ export const translations = {
     nav: {
       whoWeServe: "من نخدم",
       services: "خدماتنا",
-      whyUs: "لماذا فاستمايل",
+      whyUs: "لماذا فاست مايل",
       contact: "تواصل معنا",
       talkToSales: "تحدث مع فريق المبيعات"
     },
@@ -127,7 +127,7 @@ export const translations = {
     },
     whyUs: {
       title: "لماذا تختار",
-      titleAccent: "فاستمايل؟",
+      titleAccent: "فاست مايل؟",
       speakStreet: "نحن نعرف شوارع الكويت",
       speakStreetDesc: "تركيز محلي فائق مع معرفة حميمة بأحياء الكويت، من السالمية إلى حولي",
       friendlyDrivers: "سائقون محليون ودودون",
@@ -146,7 +146,7 @@ export const translations = {
       titleAccent: "الرائدة في الكويت"
     },
     contact: {
-      title: "انضم إلى فاستمايل الآن",
+      title: "انضم إلى فاست مايل الآن",
       subtitle: "انضم إلى شبكة التوصيل الأكثر موثوقية في الكويت. ابدأ بخطة مخصصة مصممة لاحتياجات عملك.",
       emailUs: "راسلنا",
       callUs: "اتصل بنا",
@@ -159,7 +159,7 @@ export const translations = {
       services: "خدماتنا",
       contact: "اتصل بنا",
       becomePartner: "كن شريكاً",
-      copyright: "© 2025 فاستمايل. جميع الحقوق محفوظة."
+      copyright: "© 2025 فاست مايل. جميع الحقوق محفوظة."
     }
   }
 };
