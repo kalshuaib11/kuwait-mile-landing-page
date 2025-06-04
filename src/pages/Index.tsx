@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
@@ -12,7 +11,7 @@ const Index = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <img 
-                src="/lovable-uploads/cc33c8df-a916-45a8-b0e6-9554aa9d7d4d.png" 
+                src="/lovable-uploads/9a923dd4-975a-42f0-bf9b-51a203a60a33.png" 
                 alt="FastMile" 
                 className="h-8 w-auto"
               />
@@ -329,7 +328,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-6 md:mb-0">
               <img 
-                src="/lovable-uploads/cc33c8df-a916-45a8-b0e6-9554aa9d7d4d.png" 
+                src="/lovable-uploads/9a923dd4-975a-42f0-bf9b-51a203a60a33.png" 
                 alt="FastMile" 
                 className="h-10 w-auto"
               />
