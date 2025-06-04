@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/data/translations";
 import LanguageToggle from "./LanguageToggle";
@@ -36,15 +36,12 @@ const MobileNav = () => {
       <SheetContent side={isRTL ? "right" : "left"} className="w-80 p-0">
         <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b">
+          <div className="flex items-center p-6 border-b">
             <img 
               alt="FastMile" 
               src="/lovable-uploads/b20a403a-ada4-4723-a619-b6fe026270fd.png" 
               className="h-10 w-auto" 
             />
-            <Button variant="ghost" size="icon" onClick={() => setOpen(false)}>
-              <X className="h-6 w-6" />
-            </Button>
           </div>
           
           {/* Navigation Links */}
