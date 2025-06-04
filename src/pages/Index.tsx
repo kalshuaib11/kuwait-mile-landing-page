@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
@@ -244,17 +245,17 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/08d95502-c271-44a8-a042-6e161edc5f65.png" 
                 alt="Bascota" 
-                className="h-16 w-auto object-contain"
+                className="h-24 w-auto object-contain"
               />
               <img 
                 src="/lovable-uploads/5efbf4e2-d53d-4348-afa3-fd50555536d8.png" 
                 alt="Pharmazone" 
-                className="h-16 w-auto object-contain"
+                className="h-24 w-auto object-contain"
               />
               <img 
                 src="/lovable-uploads/9c56aeed-f6ca-4c81-82e8-92c4fb0fe614.png" 
                 alt="Talabat" 
-                className="h-16 w-auto object-contain"
+                className="h-24 w-auto object-contain"
               />
             </div>
           </div>
