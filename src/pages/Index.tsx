@@ -1,7 +1,21 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
+
 const Index = () => {
+  const handlePhoneCall = () => {
+    window.location.href = "tel:+96598571783";
+  };
+
+  const handleWhatsAppGeneral = () => {
+    window.open("https://wa.me/96598571783?text=Hello%20FastMile,%20I%27m%20interested%20in%20your%20delivery%20services.", "_blank");
+  };
+
+  const handleWhatsAppPartnership = () => {
+    window.open("https://wa.me/96598571783?text=Hello%20FastMile,%20I%27m%20a%20business%20owner%20interested%20in%20partnering%20with%20you.", "_blank");
+  };
+
   return <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
@@ -14,7 +28,10 @@ const Index = () => {
               <a href="#services" className="text-gray-600 hover:text-black transition-colors">Services</a>
               <a href="#why-us" className="text-gray-600 hover:text-black transition-colors">Why Us</a>
               <a href="#contact" className="text-gray-600 hover:text-black transition-colors">Contact</a>
-              <Button className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-6">
+              <Button 
+                onClick={handlePhoneCall}
+                className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-6"
+              >
                 Talk to Sales
               </Button>
             </div>
@@ -48,10 +65,19 @@ const Index = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Button size="lg" className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-lg hover:shadow-xl">
+              <Button 
+                size="lg" 
+                onClick={handlePhoneCall}
+                className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-lg hover:shadow-xl"
+              >
                 Talk to Sales
               </Button>
-              <Button variant="outline" size="lg" className="border-3 border-[#34b2ff] text-[#34b2ff] hover:bg-[#34b2ff] hover:text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                onClick={handleWhatsAppGeneral}
+                className="border-3 border-[#34b2ff] text-[#34b2ff] hover:bg-[#34b2ff] hover:text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105"
+              >
                 <MessageCircle className="mr-3 h-6 w-6" />
                 WhatsApp Us
               </Button>
@@ -221,8 +247,8 @@ const Index = () => {
               Trusted By Kuwait's <span className="text-[#34b2ff]">Leading Businesses</span>
             </h3>
             <div className="flex justify-center items-center space-x-15 opacity-4">
-              <img src="/lovable-uploads/08d95502-c271-44a8-a042-6e161edc5f65.png" alt="Bascota" className="h-48 w-auto object-contain" />
-              <img src="/lovable-uploads/5efbf4e2-d53d-4348-afa3-fd50555536d8.png" alt="Pharmazone" className="h-40 w-auto object-contain" />
+              <img src="/lovable-uploads/08d95502-c271-44a8-a042-6e161edc5f65.png" alt="Bascota" className="h-24 w-auto object-contain" />
+              <img src="/lovable-uploads/5efbf4e2-d53d-4348-afa3-fd50555536d8.png" alt="Pharmazone" className="h-24 w-auto object-contain" />
               <img src="/lovable-uploads/9c56aeed-f6ca-4c81-82e8-92c4fb0fe614.png" alt="Talabat" className="h-24 w-auto object-contain" />
             </div>
           </div>
@@ -253,7 +279,10 @@ const Index = () => {
             </div>
 
             {/* Phone Card */}
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <div 
+              className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 cursor-pointer"
+              onClick={handlePhoneCall}
+            >
               <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-2xl mb-6">
                 <Phone className="w-10 h-10 text-white" />
               </div>
@@ -284,7 +313,13 @@ const Index = () => {
 
           {/* CTA Button */}
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl">Partner With Us</Button>
+            <Button 
+              size="lg" 
+              onClick={handleWhatsAppPartnership}
+              className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl"
+            >
+              Partner With Us
+            </Button>
           </div>
         </div>
       </section>
