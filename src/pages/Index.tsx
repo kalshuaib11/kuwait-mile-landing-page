@@ -5,6 +5,7 @@ import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, P
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/data/translations";
 import LanguageToggle from "@/components/LanguageToggle";
+import MobileNav from "@/components/MobileNav";
 
 const Index = () => {
   const { language, isRTL } = useLanguage();
@@ -31,6 +32,8 @@ const Index = () => {
             <div className="flex items-center">
               <img alt="FastMile" src="/lovable-uploads/b20a403a-ada4-4723-a619-b6fe026270fd.png" className="h-12 w-auto" />
             </div>
+            
+            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
               <a href="#who-we-serve" className="text-gray-600 hover:text-black transition-colors">{t.nav.whoWeServe}</a>
               <a href="#services" className="text-gray-600 hover:text-black transition-colors">{t.nav.services}</a>
@@ -40,6 +43,11 @@ const Index = () => {
               <Button onClick={handlePhoneCall} className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-6">
                 {t.nav.talkToSales}
               </Button>
+            </div>
+            
+            {/* Mobile Navigation */}
+            <div className="md:hidden">
+              <MobileNav />
             </div>
           </div>
         </div>
