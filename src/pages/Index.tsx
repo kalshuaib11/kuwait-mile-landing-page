@@ -5,6 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/data/translations";
 import LanguageToggle from "@/components/LanguageToggle";
 import MobileNav from "@/components/MobileNav";
+import BackgroundAnimation from "@/components/BackgroundAnimation";
 
 const Index = () => {
   const { language, isRTL, toggleLanguage } = useLanguage();
@@ -69,8 +70,9 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50/30 min-h-[90vh] flex items-center bg-slate-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50/30 min-h-[90vh] flex items-center">
+        <BackgroundAnimation />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center max-w-5xl mx-auto">
             {/* Main Headline */}
             <div className="mb-8">
@@ -129,8 +131,9 @@ const Index = () => {
       </section>
 
       {/* Who We Serve */}
-      <section id="who-we-serve" className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="who-we-serve" className="relative py-32 bg-white overflow-hidden">
+        <BackgroundAnimation />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-8 leading-tight">
               {t.whoWeServe.title} <span className="text-[#34b2ff]">{t.whoWeServe.titleAccent}</span>
@@ -171,8 +174,9 @@ const Index = () => {
       </section>
 
       {/* Our Services */}
-      <section id="services" className="py-32 bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="services" className="relative py-32 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 overflow-hidden">
+        <BackgroundAnimation />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-8 leading-tight">
               {t.services.title} <span className="text-[#34b2ff]">{t.services.titleAccent}</span>
@@ -215,8 +219,9 @@ const Index = () => {
       </section>
 
       {/* Why Choose FastMile */}
-      <section id="why-us" className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="why-us" className="relative py-32 bg-white overflow-hidden">
+        <BackgroundAnimation />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-8 leading-tight">
               {t.whyUs.title} <span className="text-[#34b2ff]">{t.whyUs.titleAccent}</span>
@@ -260,8 +265,9 @@ const Index = () => {
       </section>
 
       {/* Trusted By */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 rounded-sm overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 rounded-sm overflow-hidden">
+        <BackgroundAnimation />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h3 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-12 leading-tight">
               {t.trustedBy.title} <span className="text-[#34b2ff]">{t.trustedBy.titleAccent}</span>

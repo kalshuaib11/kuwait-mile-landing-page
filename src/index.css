@@ -1,5 +1,4 @@
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -132,5 +131,141 @@
     100% {
       transform: translateX(-33.333%);
     }
+  }
+
+  /* Background Wave Animations */
+  .animate-wave-slow {
+    animation: wave-slow 20s ease-in-out infinite;
+  }
+  
+  .animate-wave-medium {
+    animation: wave-medium 15s ease-in-out infinite;
+  }
+  
+  .animate-wave-fast {
+    animation: wave-fast 12s ease-in-out infinite;
+  }
+
+  @keyframes wave-slow {
+    0%, 100% {
+      transform: translateX(-5%) translateY(-2%) rotate(1deg);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateX(5%) translateY(2%) rotate(-1deg);
+      opacity: 0.6;
+    }
+  }
+
+  @keyframes wave-medium {
+    0%, 100% {
+      transform: translateX(3%) translateY(3%) rotate(-0.5deg);
+      opacity: 0.4;
+    }
+    50% {
+      transform: translateX(-3%) translateY(-3%) rotate(0.5deg);
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes wave-fast {
+    0%, 100% {
+      transform: translateX(-2%) translateY(2%) rotate(0.5deg);
+      opacity: 0.2;
+    }
+    50% {
+      transform: translateX(2%) translateY(-2%) rotate(-0.5deg);
+      opacity: 0.5;
+    }
+  }
+
+  /* Floating Elements */
+  .animate-float-1 {
+    animation: float-1 8s ease-in-out infinite;
+  }
+  
+  .animate-float-2 {
+    animation: float-2 10s ease-in-out infinite;
+  }
+  
+  .animate-float-3 {
+    animation: float-3 12s ease-in-out infinite;
+  }
+
+  @keyframes float-1 {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    33% {
+      transform: translateY(-10px) translateX(5px) rotate(2deg);
+    }
+    66% {
+      transform: translateY(5px) translateX(-3px) rotate(-1deg);
+    }
+  }
+
+  @keyframes float-2 {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateY(8px) translateX(-4px) rotate(-2deg);
+    }
+    75% {
+      transform: translateY(-6px) translateX(6px) rotate(1deg);
+    }
+  }
+
+  @keyframes float-3 {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    40% {
+      transform: translateY(-12px) translateX(-2px) rotate(1.5deg);
+    }
+    80% {
+      transform: translateY(4px) translateX(4px) rotate(-0.5deg);
+    }
+  }
+
+  /* Line Drawing Animation */
+  .animate-draw-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw-line 15s ease-in-out infinite;
+  }
+
+  @keyframes draw-line {
+    0% {
+      stroke-dashoffset: 1000;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      stroke-dashoffset: -1000;
+      opacity: 0;
+    }
+  }
+
+  /* Delay utilities */
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+  
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+  
+  .delay-2000 {
+    animation-delay: 2s;
   }
 }
