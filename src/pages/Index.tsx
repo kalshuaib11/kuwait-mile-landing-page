@@ -294,7 +294,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-6 md:mb-0">
-              <img src="/lovable-uploads/9a923dd4-975a-42f0-bf9b-51a203a60a33.png" alt="FastMile" className="h-10 w-auto" />
+              <img src="/lovable-uploads/9a923dd4-975a-42f0-bf9b-51a203a60a33.png" alt="FastMile" className="h-24 w-auto" />
             </div>
             
             <div className="flex flex-wrap justify-center md:justify-start space-x-12 mb-6 md:mb-0">
