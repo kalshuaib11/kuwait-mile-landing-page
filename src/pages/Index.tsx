@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
@@ -121,7 +120,7 @@ const Index = () => {
                     <item.icon className="w-10 h-10 text-[#34b2ff] group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl lg:text-3xl font-bold text-black mb-4">{item.title}</h3>
-                  <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">{item.desc}</p>
+                  <p className="text-lg text-gray-600 leading-relaxed">{item.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -252,70 +251,73 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-[#34b2ff] relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#34b2ff] to-[#2899e6]"></div>
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight">
+      <section id="contact" className="py-32 bg-gradient-to-br from-[#34b2ff] via-[#2899e6] to-[#1e7cc7] relative overflow-hidden">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
               Partner with FastMile Today
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Contact us today to discuss your delivery needs
+            <p className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Join Kuwait's most reliable delivery network. Get started with a custom plan tailored to your business needs.
             </p>
-            
-            <Button 
-              size="lg" 
-              className="bg-white text-[#34b2ff] hover:bg-gray-100 px-8 py-3 text-lg font-bold rounded-xl transition-all hover:scale-105 shadow-xl mb-12"
-            >
-              Start Partnership
-            </Button>
           </div>
 
-          {/* Contact Info Grid */}
-          <div className="space-y-8">
-            {/* Phone and Email Side by Side */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Phone */}
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center border border-white/20">
-                <Phone className="w-8 h-8 text-white mb-4 mx-auto" />
-                <h4 className="text-lg font-bold text-white mb-2">Phone</h4>
-                <p className="text-blue-100">+965 98571783</p>
+          {/* Contact Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {/* Email Card */}
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-2xl mb-6">
+                <Mail className="w-10 h-10 text-white" />
               </div>
-
-              {/* Email */}
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center border border-white/20">
-                <Mail className="w-8 h-8 text-white mb-4 mx-auto" />
-                <h4 className="text-lg font-bold text-white mb-2">Email</h4>
-                <p className="text-blue-100">kwfastmile@gmail.com</p>
-              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">Email</h3>
+              <p className="text-blue-100 text-lg">kwfastmile@gmail.com</p>
             </div>
 
-            {/* Office Location with Map */}
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-              <div className="flex items-center justify-center mb-4">
-                <MapPin className="w-8 h-8 text-white mr-3" />
-                <h4 className="text-lg font-bold text-white">Our Head Office</h4>
+            {/* Phone Card */}
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-2xl mb-6">
+                <Phone className="w-10 h-10 text-white" />
               </div>
-              <p className="text-blue-100 text-center mb-6">
-                Sharq, Block 2, Ahmad Aljaber Street<br />
-                CBK Building, Floor 1<br />
-                Kuwait City, Kuwait
-              </p>
-              
-              {/* Google Maps Embed */}
-              <div className="w-full h-48 rounded-lg overflow-hidden">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14434.658469325736!2d47.9706229!3d29.3749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf85fd5ac93315%3A0xd542b96c60b7f3d2!2sSharq%2C%20Kuwait%20City%2C%20Kuwait!5e0!3m2!1sen!2s!4v1735919234567!5m2!1sen!2s"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="rounded-lg"
-                ></iframe>
-              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">Phone</h3>
+              <p className="text-blue-100 text-lg">+965 98571783</p>
             </div>
+          </div>
+
+          {/* Office Location */}
+          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 max-w-4xl mx-auto">
+            <div className="flex items-center justify-center mb-6">
+              <MapPin className="w-8 h-8 text-white mr-3" />
+              <h3 className="text-2xl font-bold text-white">Our Head Office</h3>
+            </div>
+            <p className="text-blue-100 text-center text-lg mb-8 leading-relaxed">
+              Sharq, Block 2, Ahmad Aljaber Street<br />
+              CBK Building, Floor 1<br />
+              Kuwait City, Kuwait
+            </p>
+            
+            {/* Compact Google Maps Embed */}
+            <div className="w-full max-w-2xl mx-auto h-64 rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14434.658469325736!2d47.9706229!3d29.3749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf85fd5ac93315%3A0xd542b96c60b7f3d2!2sSharq%2C%20Kuwait%20City%2C%20Kuwait!5e0!3m2!1sen!2s!4v1735919234567!5m2!1sen!2s"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-2xl"
+              ></iframe>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center mt-12">
+            <Button 
+              size="lg" 
+              className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl"
+            >
+              Start Your Partnership
+            </Button>
           </div>
         </div>
       </section>
