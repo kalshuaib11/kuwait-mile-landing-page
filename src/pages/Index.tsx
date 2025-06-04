@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
@@ -25,6 +24,7 @@ const Index = () => {
               <img alt="FastMile" src="/lovable-uploads/b20a403a-ada4-4723-a619-b6fe026270fd.png" className="h-12 w-auto" />
             </div>
             <div className="hidden md:flex items-center space-x-8">
+              <a href="#who-we-serve" className="text-gray-600 hover:text-black transition-colors">Who We Serve</a>
               <a href="#services" className="text-gray-600 hover:text-black transition-colors">Services</a>
               <a href="#why-us" className="text-gray-600 hover:text-black transition-colors">Why Us</a>
               <a href="#contact" className="text-gray-600 hover:text-black transition-colors">Contact</a>
@@ -109,7 +109,7 @@ const Index = () => {
       </section>
 
       {/* Who We Serve */}
-      <section className="py-32 bg-white">
+      <section id="who-we-serve" className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-8 leading-tight">
