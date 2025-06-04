@@ -1,27 +1,24 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/data/translations";
 import LanguageToggle from "@/components/LanguageToggle";
-
 const Index = () => {
-  const { language, isRTL } = useLanguage();
+  const {
+    language,
+    isRTL
+  } = useLanguage();
   const t = translations[language];
-
   const handlePhoneCall = () => {
     window.location.href = "tel:+96598571783";
   };
-
   const handleWhatsAppGeneral = () => {
     window.open("https://wa.me/96598571783?text=Hello%20FastMile,%20I%27m%20interested%20in%20your%20delivery%20services.", "_blank");
   };
-
   const handleWhatsAppPartnership = () => {
     window.open("https://wa.me/96598571783?text=Hello%20FastMile,%20I%27m%20a%20business%20owner%20interested%20in%20partnering%20with%20you.", "_blank");
   };
-
   return <div className={`min-h-screen bg-white ${isRTL ? 'font-cairo' : ''}`}>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
@@ -36,10 +33,7 @@ const Index = () => {
               <a href="#why-us" className="text-gray-600 hover:text-black transition-colors">{t.nav.whyUs}</a>
               <a href="#contact" className="text-gray-600 hover:text-black transition-colors">{t.nav.contact}</a>
               <LanguageToggle />
-              <Button 
-                onClick={handlePhoneCall}
-                className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-6"
-              >
+              <Button onClick={handlePhoneCall} className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-6">
                 {t.nav.talkToSales}
               </Button>
             </div>
@@ -53,10 +47,10 @@ const Index = () => {
           <div className="text-center max-w-5xl mx-auto">
             {/* Main Headline */}
             <div className="mb-8">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-black leading-[0.9] mb-6 tracking-tight">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-black leading-[0.9] mb-6 tracking-tight font-extrabold">
                 {t.hero.headline}
                 <br />
-                <span className="text-[#34b2ff] relative">
+                <span className="text-[#34b2ff] relative font-extrabold">
                   {t.hero.headlineAccent}
                   <div className="absolute -bottom-2 left-0 w-full h-1 bg-[#34b2ff]/20 rounded-full"></div>
                 </span>
@@ -73,19 +67,10 @@ const Index = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Button 
-                size="lg" 
-                onClick={handlePhoneCall}
-                className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-lg hover:shadow-xl"
-              >
+              <Button size="lg" onClick={handlePhoneCall} className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-lg hover:shadow-xl">
                 {t.hero.talkToSales}
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                onClick={handleWhatsAppGeneral}
-                className="border-3 border-[#34b2ff] text-[#34b2ff] hover:bg-[#34b2ff] hover:text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105"
-              >
+              <Button variant="outline" size="lg" onClick={handleWhatsAppGeneral} className="border-3 border-[#34b2ff] text-[#34b2ff] hover:bg-[#34b2ff] hover:text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105">
                 <MessageCircle className={`${isRTL ? 'ml-3' : 'mr-3'} h-6 w-6`} />
                 {t.hero.whatsappUs}
               </Button>
@@ -287,15 +272,12 @@ const Index = () => {
             </div>
 
             {/* Phone Card */}
-            <div 
-              className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 cursor-pointer"
-              onClick={handlePhoneCall}
-            >
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 cursor-pointer" onClick={handlePhoneCall}>
               <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-2xl mb-6">
                 <Phone className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">{t.contact.callUs}</h3>
-              <p className="text-blue-100 text-lg">+965 98571783</p>
+              <p className="text-blue-100 text-lg">‪+965 9857 1783‬</p>
             </div>
           </div>
 
@@ -319,11 +301,7 @@ const Index = () => {
 
           {/* CTA Button */}
           <div className="text-center mt-12">
-            <Button 
-              size="lg" 
-              onClick={handleWhatsAppPartnership}
-              className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl"
-            >
+            <Button size="lg" onClick={handleWhatsAppPartnership} className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl">
               {t.contact.partnerWithUs}
             </Button>
           </div>
