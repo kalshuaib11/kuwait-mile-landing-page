@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
@@ -65,8 +66,8 @@ const Index = () => {
                 size="lg"
                 className="border-3 border-[#34b2ff] text-[#34b2ff] hover:bg-[#34b2ff] hover:text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105"
               >
-                <Phone className="mr-3 h-6 w-6" />
-                Call Us
+                <MessageCircle className="mr-3 h-6 w-6" />
+                WhatsApp Us
               </Button>
             </div>
 
