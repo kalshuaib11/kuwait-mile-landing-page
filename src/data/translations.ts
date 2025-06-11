@@ -6,7 +6,8 @@ export const translations = {
       services: "Services",
       whyUs: "Why Us",
       contact: "Contact",
-      talkToSales: "Talk to Sales"
+      talkToSales: "Talk to Sales",
+      merchantLogin: "Merchant Login / Sign Up"
     },
     hero: {
       headline: "Delivery You Can",
@@ -16,7 +17,8 @@ export const translations = {
       talkToSales: "Talk to Sales",
       whatsappUs: "WhatsApp Us",
       featureTitle: "Fast & Reliable",
-      featureDesc: "Delivering across Kuwait with precision and care"
+      featureDesc: "Delivering across Kuwait with precision and care",
+      becomeMerchant: "Become a Merchant"
     },
     whoWeServe: {
       title: "Who We",
@@ -71,14 +73,16 @@ export const translations = {
       callUs: "Call Us",
       headOffice: "Our Head Office",
       address: "Sharq, Block 2, Ahmad Aljaber Street\nCBK Building, Floor 1\nKuwait City, Kuwait",
-      partnerWithUs: "Partner With Us"
+      partnerWithUs: "Partner With Us",
+      startAsVendor: "Start as a Vendor"
     },
     footer: {
       about: "About",
       services: "Services",
       contact: "Contact",
       becomePartner: "Become a Partner",
-      copyright: "© 2025 FastMile. All rights reserved."
+      copyright: "© 2025 FastMile. All rights reserved.",
+      merchantPortal: "Merchant Portal"
     }
   },
   ar: {
@@ -87,7 +91,8 @@ export const translations = {
       services: "خدماتنا",
       whyUs: "لماذا فاست مايل",
       contact: "تواصل معنا",
-      talkToSales: "تحدث مع فريق المبيعات"
+      talkToSales: "تحدث مع فريق المبيعات",
+      merchantLogin: "تسجيل الدخول / إنشاء حساب للتجار"
     },
     hero: {
       headline: "التوصيل الذي يمكنك",
@@ -97,7 +102,8 @@ export const translations = {
       talkToSales: "تحدث مع فريق المبيعات",
       whatsappUs: "واتساب",
       featureTitle: "سريع وموثوق",
-      featureDesc: "التوصيل في جميع أنحاء الكويت بدقة واهتمام"
+      featureDesc: "التوصيل في جميع أنحاء الكويت بدقة واهتمام",
+      becomeMerchant: "سجّل كتاجر"
     },
     whoWeServe: {
       title: "من",
@@ -152,14 +158,16 @@ export const translations = {
       callUs: "اتصل بنا",
       headOffice: "مكتبنا الرئيسي",
       address: "مدينة الكويت، شرق، قطعة 2\nشارع أحمد الجابر، مبنى البنك التجاري الكويتي، الدور الأول",
-      partnerWithUs: "كن شريكاً معنا"
+      partnerWithUs: "كن شريكاً معنا",
+      startAsVendor: "ابدأ كتاجر"
     },
     footer: {
       about: "من نحن",
       services: "خدماتنا",
       contact: "اتصل بنا",
       becomePartner: "كن شريكاً",
-      copyright: "© 2025 فاست مايل. جميع الحقوق محفوظة."
+      copyright: "© 2025 فاست مايل. جميع الحقوق محفوظة.",
+      merchantPortal: "بوابة التاجر"
     }
   }
 };

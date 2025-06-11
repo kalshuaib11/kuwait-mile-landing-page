@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
@@ -21,6 +22,10 @@ const Index = () => {
 
   const handleWhatsAppPartnership = () => {
     window.open("https://wa.me/96598571783?text=Hello%20FastMile,%20I%27m%20a%20business%20owner%20interested%20in%20partnering%20with%20you.", "_blank");
+  };
+
+  const handleMerchantLogin = () => {
+    window.open("https://fastmile-merchant-prod.disruptem.com/auth/login", "_blank");
   };
 
   return (
@@ -48,6 +53,9 @@ const Index = () => {
                 {t.nav.contact}
               </a>
               <LanguageToggle />
+              <Button onClick={handleMerchantLogin} variant="outline" className="border-[#34b2ff] text-[#34b2ff] hover:bg-[#34b2ff] hover:text-white px-4">
+                {t.nav.merchantLogin}
+              </Button>
               <Button onClick={handlePhoneCall} className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-6">
                 {t.nav.talkToSales}
               </Button>
@@ -95,13 +103,20 @@ const Index = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
               <Button size="lg" onClick={handlePhoneCall} className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-lg hover:shadow-xl">
                 {t.hero.talkToSales}
               </Button>
               <Button variant="outline" size="lg" onClick={handleWhatsAppGeneral} className="border-3 border-[#34b2ff] text-[#34b2ff] hover:bg-[#34b2ff] hover:text-white px-12 py-6 text-xl font-bold rounded-2xl transition-all hover:scale-105">
                 <MessageCircle className={`${isRTL ? 'ml-3' : 'mr-3'} h-6 w-6`} />
                 {t.hero.whatsappUs}
+              </Button>
+            </div>
+
+            {/* Merchant CTA */}
+            <div className="mb-16">
+              <Button variant="outline" size="lg" onClick={handleMerchantLogin} className="border-2 border-gray-300 text-gray-700 hover:border-[#34b2ff] hover:text-[#34b2ff] px-10 py-4 text-lg font-semibold rounded-xl transition-all hover:scale-105">
+                {t.hero.becomeMerchant}
               </Button>
             </div>
 
@@ -352,10 +367,13 @@ const Index = () => {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="text-center mt-12">
+          {/* CTA Buttons */}
+          <div className="text-center mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" onClick={handleWhatsAppPartnership} className="bg-white text-[#34b2ff] hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105 shadow-xl">
               {t.contact.partnerWithUs}
+            </Button>
+            <Button variant="outline" size="lg" onClick={handleMerchantLogin} className="border-2 border-white text-white hover:bg-white hover:text-[#34b2ff] px-12 py-4 text-xl font-bold rounded-2xl transition-all hover:scale-105">
+              {t.contact.startAsVendor}
             </Button>
           </div>
         </div>
@@ -374,6 +392,7 @@ const Index = () => {
               <a href="#services" className="text-lg text-gray-300 hover:text-white transition-colors">{t.footer.services}</a>
               <a href="#contact" className="text-lg text-gray-300 hover:text-white transition-colors">{t.footer.contact}</a>
               <a href="#" className="text-lg text-gray-300 hover:text-white transition-colors">{t.footer.becomePartner}</a>
+              <a href="#" onClick={handleMerchantLogin} className="text-lg text-[#34b2ff] hover:text-white hover:underline transition-colors cursor-pointer">{t.footer.merchantPortal}</a>
             </div>
 
             <div className={`flex items-center ${isRTL ? 'space-x-reverse' : ''} space-x-6`}>
