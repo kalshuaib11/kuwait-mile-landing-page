@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Utensils, ShoppingBag, Pill, ShoppingCart, Truck, Package, BarChart3, HandHeart, Map, Users, Headphones, MapIcon, Brain, Star } from "lucide-react";
@@ -7,29 +6,26 @@ import { translations } from "@/data/translations";
 import LanguageToggle from "@/components/LanguageToggle";
 import MobileNav from "@/components/MobileNav";
 import BackgroundAnimation from "@/components/BackgroundAnimation";
-
 const Index = () => {
-  const { language, isRTL, toggleLanguage } = useLanguage();
+  const {
+    language,
+    isRTL,
+    toggleLanguage
+  } = useLanguage();
   const t = translations[language];
-
   const handlePhoneCall = () => {
     window.location.href = "tel:+96598571783";
   };
-
   const handleWhatsAppGeneral = () => {
     window.open("https://wa.me/96598571783?text=Hello%20FastMile,%20I%27m%20interested%20in%20your%20delivery%20services.", "_blank");
   };
-
   const handleWhatsAppPartnership = () => {
     window.open("https://wa.me/96598571783?text=Hello%20FastMile,%20I%27m%20a%20business%20owner%20interested%20in%20partnering%20with%20you.", "_blank");
   };
-
   const handleMerchantLogin = () => {
     window.open("https://fastmile-merchant-prod.disruptem.com/auth/login", "_blank");
   };
-
-  return (
-    <div className={`min-h-screen bg-white ${isRTL ? 'font-cairo' : ''}`}>
+  return <div className={`min-h-screen bg-white ${isRTL ? 'font-cairo' : ''}`}>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,19 +52,13 @@ const Index = () => {
               <Button onClick={handleMerchantLogin} variant="outline" className="border-[#34b2ff] text-[#34b2ff] hover:bg-[#34b2ff] hover:text-white px-4">
                 {t.nav.merchantLogin}
               </Button>
-              <Button onClick={handlePhoneCall} className="bg-[#34b2ff] hover:bg-[#2899e6] text-white px-6">
-                {t.nav.talkToSales}
-              </Button>
+              
             </div>
             
             {/* Mobile Navigation */}
             <div className="md:hidden flex items-center space-x-3 rtl:space-x-reverse">
               {/* Arabic Toggle Button */}
-              <button
-                onClick={toggleLanguage}
-                className="text-black hover:text-[#34b2ff] transition-colors text-xl font-bold px-2 py-1 rounded cursor-pointer"
-                aria-label="Toggle language"
-              >
+              <button onClick={toggleLanguage} className="text-black hover:text-[#34b2ff] transition-colors text-xl font-bold px-2 py-1 rounded cursor-pointer" aria-label="Toggle language">
                 {language === 'en' ? 'ع' : 'EN'}
               </button>
               <MobileNav />
@@ -407,8 +397,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
